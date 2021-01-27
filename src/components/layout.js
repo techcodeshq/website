@@ -1,55 +1,67 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { Head, SmoothScroll, Cursor, Footer, Nav } from '@components';
+import { motion, AnimatePresence } from 'framer-motion';
+import { GlobalStyle } from '@styles';
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.5,
+      when: 'beforeChildren',
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.5 },
+  },
+};
 
-import Header from "./header"
-import "./layout.css"
+const Layout = ({ children, location }) => {
+  const [loading, setIsLoading] = useState(true);
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 100);
+  }, [location.pathname]);
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      <Head />
+      <GlobalStyle />
+      <SmoothScroll callbacks={location} />
+      <Cursor />
+
+      {loading ? null : (
+        <AnimatePresence>
+          <Nav />
+          <motion.main
+            id="container"
+            key={location.pathname}
+            variants={variants}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            style={{ overflowX: 'hidden' }}>
+            {children}
+            <div data-scroll-section>
+              <Footer />
+            </div>
+          </motion.main>
+        </AnimatePresence>
+      )}
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
