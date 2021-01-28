@@ -1,5 +1,5 @@
 <p align="center"><img width="192" alt="CODE logo" src="https://i.imgur.com/4387Kzs.png"></p>
-<h1 align="center"><a href="https://hackclub.com/">Council of Digital Engineers v1</a></h1>
+<h1 align="center"><a href="https://techcodes.org/">Council of Digital Engineers v1</a></h1>
 <p align="center"><i>The source code for techcodes.org</i></p>
 
 Our new website—powered by [Gatsby] and hosted on [Netlify].
