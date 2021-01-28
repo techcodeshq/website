@@ -32,9 +32,10 @@ const ImageWrapper = styled.div`
 const StyledImage = styled(Img)`
   width: 1000px;
   position: absolute;
-  left: 60%;
+  left: 90%;
   transform: translate(-10%, 12%);
 
+  ${media.massive`left: 80%;`};
   ${media.bigDesktop`
     width: 800px;
     left: 50%;
