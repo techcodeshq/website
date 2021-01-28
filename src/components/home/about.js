@@ -4,12 +4,13 @@ import { media, Container, Section, Card } from '@styles';
 import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
-  padding-top: 25rem;
+  padding-top: 35vh;
 `;
 const TextWrapper = styled.div`
   max-width: 1000px;
 
   ${media.massive`
+    padding-top: 8rem;
     max-width: 1500px;
   `};
   ${media.thone`text-align: center;`};
@@ -23,7 +24,22 @@ const StyledImage = styled(Img)`
   left: 80%;
   transform: translate(40%, 10%);
 
-  ${media.massive`display: none;`};
+  ${media.massive`
+    width: 700px;
+    left: 60%;
+    transform: translateX(-50%);
+    margin-top: -30rem;
+  `};
+  ${media.tablet`
+    width: 400px;
+    margin-top: -15rem;
+  `};
+  ${media.thone`
+    width: 80vw;
+    left: 45%;
+    margin-top: -13rem;
+  `};
+  ${media.phablet`margin-top: -10rem;`};
 `;
 const Title = styled.h1`
   font-size: 75px;

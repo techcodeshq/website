@@ -31,28 +31,28 @@ export const query = graphql`
     rocket: file(relativePath: { eq: "props/rocket.png" }) {
       childImageSharp {
         fluid(quality: 60, maxWidth: 800) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     bucket: file(relativePath: { eq: "props/bucket.png" }) {
       childImageSharp {
         fluid(quality: 60, maxWidth: 450) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     folder: file(relativePath: { eq: "props/folder.png" }) {
       childImageSharp {
         fluid(quality: 60, maxWidth: 400) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     potion: file(relativePath: { eq: "props/potion.png" }) {
       childImageSharp {
         fluid(quality: 60, maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
