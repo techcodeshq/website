@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media, Container, Section, Card } from '@styles';
-
-import Searching from '@images/props/searching.png';
+import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
   padding-top: 25rem;
@@ -11,36 +10,20 @@ const TextWrapper = styled.div`
   max-width: 1000px;
 
   ${media.massive`
-    padding-top: 8rem;
     max-width: 1500px;
   `};
   ${media.thone`text-align: center;`};
 `;
 const ImageWrapper = styled.div`
-  ${media.massive`
-    position: absolute;
-    left: 50%;
-  `};
+  position: absolute;
 `;
-const StyledImage = styled.img`
+const StyledImage = styled(Img)`
   width: 800px;
   position: absolute;
   left: 80%;
-  transform: translate(-50%, 20%);
+  transform: translate(40%, 10%);
 
-  ${media.massive`
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: -30rem;
-  `};
-  ${media.tablet`
-    width: 600px;
-    margin-top: -25rem;
-  `};
-  ${media.thone`
-    width: 80vw;
-    margin-top: -10rem;
-  `};
+  ${media.massive`display: none;`};
 `;
 const Title = styled.h1`
   font-size: 75px;
@@ -75,13 +58,13 @@ const Label = styled.span`
   ${media.thone`font-size: 19px;`};
 `;
 
-const About = () => {
+const About = ({ data }) => {
   return (
     <StyledSection>
       <Container>
         <Card bg="var(--purple)" color="var(--white)">
           <ImageWrapper data-scroll data-scroll-speed={1}>
-            <StyledImage src={Searching} alt="Searching" />
+            <StyledImage fluid={data.searching.childImageSharp.fluid} alt="Searching" />
           </ImageWrapper>
           <TextWrapper>
             <Label>About us</Label>

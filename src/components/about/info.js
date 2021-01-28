@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { media, Container, Section, Card } from '@styles';
 
 import BoxRocket from '@images/props/box_rocket.png';

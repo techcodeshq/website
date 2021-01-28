@@ -7,9 +7,18 @@ import { media, Container, Section, Card } from '@styles';
 const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 4rem;
 
   ${media.tablet`flex-direction: column;`};
+`;
+const StyledCard = styled(Card)`
+  :not(:first-child) {
+    margin-left: 3rem;
+
+    ${media.tablet`
+      margin-left: 0;
+      margin-top: 3rem;
+    `};
+  }
 `;
 const PaddingWrapper = styled.div`
   padding: 3rem 0;
@@ -48,22 +57,22 @@ const CTA = () => {
     <Section>
       <Container>
         <CardsWrapper>
-          <Card width="50%" bg="var(--blue)">
+          <StyledCard width="50%" bg="var(--blue)">
             <PaddingWrapper>
               <TextWrapper to="/about">
                 <Title>About us</Title>
                 <Subtitle>Learn who we are and why we’re here</Subtitle>
               </TextWrapper>
             </PaddingWrapper>
-          </Card>
-          <Card width="50%" bg="var(--light-purple)">
+          </StyledCard>
+          <StyledCard width="50%" bg="var(--light-purple)">
             <PaddingWrapper>
               <TextWrapperA href="https://bank.hackclub.com/donations/start/techcodes">
                 <Title>Donate</Title>
                 <Subtitle>Help us out by making a small donation</Subtitle>
               </TextWrapperA>
             </PaddingWrapper>
-          </Card>
+          </StyledCard>
         </CardsWrapper>
       </Container>
     </Section>

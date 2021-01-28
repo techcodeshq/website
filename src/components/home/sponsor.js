@@ -13,12 +13,9 @@ const TextWrapper = styled.div`
 `;
 const Row = styled.div`
   display: flex;
-  gap: 10rem;
 
   ${media.bigDesktop`gap: 2rem;`};
-  ${media.desktop`
-    flex-direction: column;
-  `};
+  ${media.desktop`flex-direction: column;`};
   ${media.thone`text-align: center;`};
 `;
 const ContentWrapper = styled.div`
@@ -37,11 +34,14 @@ const ImageContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-left: 2rem;
 
   ${media.massive`flex-direction: column;`};
   ${media.desktop`
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 0;
+    margin-top: 3rem;
   `};
   ${media.thone`justify-content: center;`};
 `;
@@ -94,7 +94,10 @@ const SponsorImage = styled.img`
       margin-right: 0;
     }
   `};
-  ${media.thone`width: 200px;`};
+  ${media.thone`
+    width: 200px;
+    margin-right: 0;
+  `};
 `;
 
 const Sponsor = () => {

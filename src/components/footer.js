@@ -22,21 +22,25 @@ const Row = styled.div`
 `;
 const RowInRow = styled.div`
   display: flex;
-  gap: 25rem;
   flex-direction: row;
   align-items: center;
 
-  ${media.desktop`gap: 10rem;`};
   ${media.tablet`
     flex-direction: column;
-    gap: 2rem;
+    margin-top: 2rem;
     align-items: flex-start;
   `};
 `;
 const Col = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+
+  :not(:first-child) {
+    margin-left: 10rem;
+
+    ${media.desktop`margin-top: 2rem;`};
+    ${media.tablet`margin-left: 0;`};
+  }
 `;
 const ColTitle = styled.p`
   font-weight: 700;
@@ -56,11 +60,11 @@ const ColLink = styled(OutboundLink)`
 `;
 const Socials = styled.div`
   display: flex;
-  gap: 1rem;
   align-items: center;
 
   svg {
     width: 2rem;
+    margin-right: 1rem;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0, 1);
     color: #000000;
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media, Container, Section, Card, Button } from '@styles';
-
-import Drawing from '@images/props/drawing.png';
+import Img from 'gatsby-image';
 
 const CustomSection = styled(Section)`
   ${media.bigDesktop`padding-top: 24rem;`};
@@ -28,12 +27,9 @@ const StyledCard = styled(Card)`
   ${media.bigDesktop`width: 100%;`};
 `;
 const ImageWrapper = styled.div`
-  ${media.bigDesktop`
-    position: absolute;
-    left: 50%;
-  `};
+  position: absolute;
 `;
-const StyledImage = styled.img`
+const StyledImage = styled(Img)`
   width: 1000px;
   position: absolute;
   left: 60%;
@@ -51,7 +47,7 @@ const StyledImage = styled.img`
   `};
   ${media.thone`
     width: 90vw;
-    margin-top: -10rem;
+    margin-top: -13rem;
   `};
 `;
 const Title = styled.h1`
@@ -83,13 +79,13 @@ const Description = styled.p`
   ${media.thone`font-size: 19px;`};
 `;
 
-const Events = () => {
+const Events = ({ data }) => {
   return (
     <CustomSection>
       <Container>
         <ImageWrapper>
           <div data-scroll data-scroll-direction="horizontal" data-scroll-speed={1}>
-            <StyledImage src={Drawing} alt="Drawing" />
+            <StyledImage fluid={data.drawing.childImageSharp.fluid} alt="Drawing" />
           </div>
         </ImageWrapper>
         <StyledCard bg="var(--yellow)" color="var(--text)" width="60%">

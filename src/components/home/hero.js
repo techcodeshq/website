@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import { media, Section, Container } from '@styles';
 import { motion } from 'framer-motion';
 import useMousePosition from '@hooks/useMousePosition';
-import Bucket from '@images/props/bucket.png';
-import Folder from '@images/props/folder.png';
-import Potion from '@images/props/potion.png';
-import Rocket from '@images/props/rocket.png';
+import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
   padding-top: 15rem;
@@ -39,7 +36,7 @@ const BaseWrapper = styled(motion.div)`
 `;
 const VeryTop = styled(BaseWrapper)`
   left: 50vw;
-  top: -50px;
+  top: 50px;
   width: 800px;
   transform: rotate(1deg);
   filter: blur(3px);
@@ -97,11 +94,11 @@ const BottomRight = styled(BaseWrapper)`
     right: 30px;   
   `};
 `;
-const StyledImage = styled(motion.img)`
+const StyledImage = styled(Img)`
   width: 100%;
 `;
 
-const Hero = () => {
+const Hero = ({ data }) => {
   const { x, y } = useMousePosition();
 
   return (
@@ -112,7 +109,9 @@ const Hero = () => {
           animate={{ y: 25 }}
           transition={{ duration: 1.7, yoyo: Infinity }}>
           <div data-scroll data-scroll-speed={4}>
-            <StyledImage src={Rocket} alt="Rocket" style={{ x: x / 100, y: y / 100 }} />
+            <motion.div style={{ x: x / 100, y: y / 100 }}>
+              <StyledImage fluid={data.rocket.childImageSharp.fluid} alt="Rocket" />
+            </motion.div>
           </div>
         </VeryTop>
         <LowerTop
@@ -120,7 +119,9 @@ const Hero = () => {
           animate={{ y: 25 }}
           transition={{ duration: 1.7, yoyo: Infinity, delay: 1 }}>
           <div data-scroll data-scroll-speed={3}>
-            <StyledImage src={Bucket} alt="Bucket" style={{ x: x / 80, y: y / 80 }} />
+            <motion.div style={{ x: x / 80, y: y / 80 }}>
+              <StyledImage fluid={data.bucket.childImageSharp.fluid} alt="Bucket" />
+            </motion.div>
           </div>
         </LowerTop>
         <TextWrapper>
@@ -132,7 +133,9 @@ const Hero = () => {
           animate={{ y: 25 }}
           transition={{ duration: 1.7, yoyo: Infinity, delay: 1 }}>
           <div data-scroll data-scroll-speed={2}>
-            <StyledImage src={Folder} alt="Potion" style={{ x: x / 20, y: y / 20 }} />
+            <motion.div style={{ x: x / 50, y: y / 50 }}>
+              <StyledImage fluid={data.folder.childImageSharp.fluid} alt="Folder" />
+            </motion.div>
           </div>
         </BottomRight>
         <BottomLeft
@@ -140,7 +143,9 @@ const Hero = () => {
           animate={{ y: 25 }}
           transition={{ duration: 1.7, yoyo: Infinity, delay: 1 }}>
           <div data-scroll data-scroll-speed={3}>
-            <StyledImage src={Potion} alt="Potion" style={{ x: x / 20, y: y / 20 }} />
+            <motion.div style={{ x: x / 20, y: y / 20 }}>
+              <StyledImage fluid={data.potion.childImageSharp.fluid} alt="Potion" />
+            </motion.div>
           </div>
         </BottomLeft>
       </Container>

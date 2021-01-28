@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   transition-timing-function: ease;
   transition-duration: 0.3s;
 `;
-const StyledContainer = styled(Container)`
+const StyledContainer = styled.div`
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -121,8 +121,12 @@ const LogoWrapper = styled(Link)`
 `;
 const StyledLogo = styled.img`
   width: 4rem;
+  height: 4rem;
 
-  ${media.thone`width: 3rem;`};
+  ${media.thone`
+    width: 3rem;
+    height: 3rem;
+  `};
 `;
 const NavLink = styled(Link)`
   color: var(--text);
@@ -186,39 +190,41 @@ class Nav extends Component {
 
     return (
       <StyledHeader id="header">
-        <StyledContainer>
-          <LogoWrapper to="/">
-            <StyledLogo src={Logo} alt="CODE" />
-          </LogoWrapper>
-          <StyledNav>
-            <NavList>
-              <NavItem>
-                <NavLink to="/about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/events">Events</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/sponsors">Sponsors</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLinkA href="https://bank.hackclub.com/donations/start/techcodes">
-                  Donate
-                </NavLinkA>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/contact">Contact</NavLink>
-              </NavItem>
-            </NavList>
+        <Container>
+          <StyledContainer>
+            <LogoWrapper to="/">
+              <StyledLogo src={Logo} alt="CODE" />
+            </LogoWrapper>
+            <StyledNav>
+              <NavList>
+                <NavItem>
+                  <NavLink to="/about">About</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/events">Events</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/sponsors">Sponsors</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLinkA href="https://bank.hackclub.com/donations/start/techcodes">
+                    Donate
+                  </NavLinkA>
+                </NavItem>
+                <NavItem>
+                  <NavLink to="/contact">Contact</NavLink>
+                </NavItem>
+              </NavList>
 
-            <StyledHamburger onClick={this.toggleMenu}>
-              <StyledHamburgerBox>
-                <StyledHamburgerInner menuOpen={menuOpen} />
-              </StyledHamburgerBox>
-            </StyledHamburger>
-            <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
-          </StyledNav>
-        </StyledContainer>
+              <StyledHamburger onClick={this.toggleMenu}>
+                <StyledHamburgerBox>
+                  <StyledHamburgerInner menuOpen={menuOpen} />
+                </StyledHamburgerBox>
+              </StyledHamburger>
+              <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
+            </StyledNav>
+          </StyledContainer>
+        </Container>
       </StyledHeader>
     );
   }
