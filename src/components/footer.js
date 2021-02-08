@@ -80,6 +80,14 @@ const RowBottom = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  a {
+    color: var(--text);
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
   ${media.tablet`flex-direction: column;`};
 `;
 const Copy = styled.small`
@@ -93,14 +101,6 @@ const Credits = styled.p`
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -1px;
-
-  a {
-    color: var(--text);
-
-    :hover {
-      text-decoration: underline;
-    }
-  }
 `;
 const Logo = styled.img`
   width: 6rem;
@@ -157,12 +157,13 @@ const Footer = () => {
           <Logo src={CODELogo} alt="Council of Digital Engineers" />
         </Row>
         <RowBottom>
+          <a href="/press-release.pdf">Download press release</a>
           <Copy>
             &copy; {currentYear} Council of Digital Engineers. 501(c)(3) nonprofit (EIN: 81-2908499)
           </Copy>
           <Credits>
             Made by{' '}
-            <OutboundLink href="https:/kyryloorlov.com" target="_blank" rel="noopener noreferrer">
+            <OutboundLink href="https://kyryloorlov.com" target="_blank" rel="noopener noreferrer">
               Kyrylo
             </OutboundLink>
           </Credits>

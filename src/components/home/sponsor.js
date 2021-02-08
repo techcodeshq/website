@@ -115,7 +115,7 @@ const Sponsor = () => {
                 to offer. It is with their help that CODE can continue to bring computer science to
                 those who need it most and strengthen their passion.
               </Description>
-              <Button to="/sponsor">Sponsor us</Button>
+              <Button to="/sponsors">Sponsor us</Button>
             </ContentWrapper>
             <ImageContainer>
               <SponsorImage src={HackClubBank} alt="Hack Club Bank" />

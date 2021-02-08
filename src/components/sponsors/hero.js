@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, Container, media } from '@styles';
+import { Section, Container, Button, media } from '@styles';
 
 import Heart from '@images/props/heart.png';
 
@@ -47,9 +47,14 @@ const Col = styled.div`
   ${media.tablet`width: 100%;`};
 `;
 const StyledImage = styled.img`
-  width: 100%;
+  width: 80%;
+  margin-left: 20%;
 
   ${media.tablet`display: none;`};
+`;
+const ButtonWrapper = styled.div`
+  font-size: 28px;
+  padding-top: 2rem;
 `;
 
 const Hero = () => {
@@ -58,11 +63,14 @@ const Hero = () => {
       <Container max>
         <Row>
           <Col bigger>
-            <BigText>We reply on our sponsors to help bring STEM education to students.</BigText>
+            <BigText>We rely on our sponsors to help bring STEM education to students.</BigText>
             <Description>
               Sponsors are the at the core of our organization. Thanks to them, we’re able to
               continue to spreading computer science education to students around the nation.
             </Description>
+            <ButtonWrapper>
+              <Button href="/sponsorship-prospectus.pdf">Download our prospectus</Button>
+            </ButtonWrapper>
           </Col>
           <Col>
             <StyledImage src={Heart} alt="About us" />

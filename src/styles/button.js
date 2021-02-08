@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const StyledGatsbyLink = styled(Link)`
   display: inline;
@@ -21,14 +21,13 @@ const StyledGatsbyLink = styled(Link)`
 `;
 
 const StyledALink = styled(OutboundLink)`
+  display: inline;
   font-size: inherit;
   color: var(--text);
   background-color: var(--greenish);
-  padding: 34px;
+  padding: 16px 48px;
   border-radius: 24px;
   border: 4px solid #000000;
-  line-height: 1;
-  position: relative;
   font-weight: 500;
   user-select: none;
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0, 1);
