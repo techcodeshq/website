@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
-
-import Blast from '@images/props/blast.png';
+import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
   padding-top: 15rem;
@@ -46,13 +45,13 @@ const Col = styled.div`
 
   ${media.tablet`width: 100%;`};
 `;
-const StyledImage = styled.img`
+const StyledImage = styled(Img)`
   width: 100%;
 
   ${media.tablet`display: none;`};
 `;
 
-const Hero = () => {
+const Hero = ({ data }) => {
   return (
     <StyledSection>
       <Container max>
@@ -65,7 +64,7 @@ const Hero = () => {
             </Description>
           </Col>
           <Col>
-            <StyledImage src={Blast} alt="About us" />
+            <StyledImage fluid={data.blast.childImageSharp.fluid} alt="About us" />
           </Col>
         </Row>
       </Container>

@@ -10,10 +10,13 @@ const StyledSection = styled(Section)`
   padding-bottom: 15rem;
   height: 100vh;
   overflow-x: hidden;
-  min-height: 60rem;
+  min-height: 80rem;
 
   ${media.desktop`padding-top: 10rem;`};
-  ${media.thone`padding-top: 5rem;`};
+  ${media.thone`
+    min-height: 20rem;
+    padding-top: 5rem;
+  `};
 `;
 const TextWrapper = styled.div`
   max-width: 900px;

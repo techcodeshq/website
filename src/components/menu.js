@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { media } from '@styles';
@@ -74,7 +73,7 @@ const NavLink = styled(Link)`
     color: var(--purple);
   }
 `;
-const NavLinkA = styled(OutboundLink)`
+const NavLinkA = styled.a`
   display: inline-block;
   text-decoration: none;
   font-size: 20px;

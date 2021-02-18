@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media, Container, Section, Card } from '@styles';
+import { media, Container, Section, Card, DefaultText } from '@styles';
 import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
@@ -54,16 +54,10 @@ const Title = styled.h1`
     letter-spacing: -1px;
   `};
 `;
-const Description = styled.p`
-  font-size: 28px;
+const CustomDescription = styled(DefaultText)`
   max-width: 75%;
-  line-height: 146%;
 
-  ${media.tablet`
-    max-width: 100%;
-    font-size: 24px;
-  `};
-  ${media.thone`font-size: 19px;`};
+  ${media.tablet`max-width: 100%;`};
 `;
 const Label = styled.span`
   font-size: 26px;
@@ -87,14 +81,14 @@ const About = ({ data }) => {
             <Title>
               We’re a student-led nonprofit looking to increase computer science engagement.
             </Title>
-            <Description>
+            <CustomDescription>
               CODE is dedicated to fostering computer science education to students of all
               backgrounds and expose them to the creativity and innovation technology brings. By
               hosting numerous activities, such as guest speaker events, workshops, hackathons, and
               programming competitions, we are able to fulfill our goal on a wider scale. Although
               we are primarily based in the NYC Metropolitan Area, we are expanding our reach
               through numerous partnerships and corporations.
-            </Description>
+            </CustomDescription>
           </TextWrapper>
         </Card>
       </Container>

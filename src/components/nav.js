@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, media } from '@styles';
 import { Link } from 'gatsby';
 import { Menu } from '@components';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 import Logo from '@images/logo.png';
 
@@ -142,7 +141,7 @@ const NavLink = styled(Link)`
     transform: scale(1.05);
   }
 `;
-const NavLinkA = styled(OutboundLink)`
+const NavLinkA = styled.a`
   color: var(--text);
   font-size: 19px;
   font-weight: 500;

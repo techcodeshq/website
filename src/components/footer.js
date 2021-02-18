@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Container } from '@styles';
 import { FormattedIcon } from '@components/icons';
 import { media } from '@styles';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import CODELogo from '@images/logo.png';
 
 const FooterSection = styled.footer`
@@ -48,7 +47,7 @@ const ColTitle = styled.p`
   font-size: 25px;
   margin: 0;
 `;
-const ColLink = styled(OutboundLink)`
+const ColLink = styled.a`
   font-weight: 500;
   font-size: 25px;
   letter-spacing: -1.4px;
@@ -127,45 +126,39 @@ const Footer = () => {
             <Col>
               <ColTitle>Socials</ColTitle>
               <Socials>
-                <OutboundLink
-                  href="https://instagram.com/bthscode"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <a href="https://instagram.com/bthscode" target="_blank" rel="noopener noreferrer">
                   <FormattedIcon name="instagram" />
-                </OutboundLink>
-                <OutboundLink
+                </a>
+                <a
                   href="https://www.linkedin.com/company/council-of-digital-engineers"
                   target="_blank"
                   rel="noopener noreferrer">
                   <FormattedIcon name="linkedin" />
-                </OutboundLink>
-                <OutboundLink
+                </a>
+                <a
                   href="https://www.youtube.com/channel/UC74GHmtwQoj3bFxw2pBYM0A"
                   target="_blank"
                   rel="noopener noreferrer">
                   <FormattedIcon name="youtube" />
-                </OutboundLink>
-                <OutboundLink
-                  href="https://github.com/CodeBTHS"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                </a>
+                <a href="https://github.com/CodeBTHS" target="_blank" rel="noopener noreferrer">
                   <FormattedIcon name="github" />
-                </OutboundLink>
+                </a>
               </Socials>
             </Col>
           </RowInRow>
           <Logo src={CODELogo} alt="Council of Digital Engineers" />
         </Row>
         <RowBottom>
-          <a href="/press-release.pdf">Download press release</a>
+          <a href="/press-release.pdf">Download February press release</a>
           <Copy>
             &copy; {currentYear} Council of Digital Engineers. 501(c)(3) nonprofit (EIN: 81-2908499)
           </Copy>
           <Credits>
             Made by{' '}
-            <OutboundLink href="https://kyryloorlov.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://kyryloorlov.com" target="_blank" rel="noopener noreferrer">
               Kyrylo
-            </OutboundLink>
+            </a>
           </Credits>
         </RowBottom>
       </Container>

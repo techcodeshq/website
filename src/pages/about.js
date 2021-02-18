@@ -8,10 +8,10 @@ const AboutPage = ({ data }) => {
     <>
       <Helmet title="About" />
       <div data-scroll-section>
-        <Hero />
+        <Hero data={data} />
       </div>
       <div data-scroll-section>
-        <Info />
+        <Info data={data} />
       </div>
       <div data-scroll-section>
         <Team data={data} />
@@ -24,6 +24,13 @@ export default AboutPage;
 
 export const query = graphql`
   {
+    blast: file(relativePath: { eq: "props/blast.png" }) {
+      childImageSharp {
+        fluid(quality: 60, maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
     chanul: file(relativePath: { eq: "team/chanul.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 100, quality: 40) {
@@ -81,6 +88,41 @@ export const query = graphql`
       }
     }
     fatim: file(relativePath: { eq: "team/fatim.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    kateri: file(relativePath: { eq: "team/kateri.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    santiago: file(relativePath: { eq: "team/santiago.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    katelyn: file(relativePath: { eq: "team/katelyn.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dashiell: file(relativePath: { eq: "team/dashiell.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    melanie: file(relativePath: { eq: "team/melanie.png" }) {
       childImageSharp {
         fluid(maxWidth: 100, quality: 40) {
           ...GatsbyImageSharpFluid

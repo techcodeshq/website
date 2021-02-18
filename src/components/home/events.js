@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { media, Container, Section, Card, Button } from '@styles';
+import { media, Container, Section, Card, Button, DefaultText } from '@styles';
 import Img from 'gatsby-image';
 
 const CustomSection = styled(Section)`
@@ -16,14 +16,14 @@ const TextWrapper = styled.div`
     ${media.tablet`font-size: 18px;`};
   }
 
-  ${media.massive`
-    max-width: 1500px;
-  `};
+  ${media.massive`max-width: 1500px;`};
   ${media.bigDesktop`padding-top: 10rem;`};
   ${media.thone`text-align: center;`};
   ${media.phablet`padding-top: 3rem;`};
 `;
 const StyledCard = styled(Card)`
+  padding-bottom: 3rem;
+
   ${media.bigDesktop`width: 100%;`};
 `;
 const ImageWrapper = styled.div`
@@ -64,20 +64,16 @@ const Title = styled.h1`
     letter-spacing: -1px;
   `};
 `;
-const Description = styled.p`
-  font-size: 28px;
+const Description = styled(DefaultText)`
   max-width: 75%;
-  line-height: 146%;
   margin-top: 5rem;
   margin-bottom: 5rem;
 
   ${media.tablet`
     max-width: 100%;
-    font-size: 24px;
     margin-top: 2rem;
     margin-bottom: 4rem;
   `};
-  ${media.thone`font-size: 19px;`};
 `;
 
 const Events = ({ data }) => {

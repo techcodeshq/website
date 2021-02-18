@@ -134,24 +134,6 @@ const Team = ({ data }) => {
           </Card>
           <Card>
             <StyledImage
-              fluid={data.priyam.childImageSharp.fluid}
-              alt="Priyam Shah"
-              objectFit="cover"
-            />
-            <div>
-              <Name>Priyam Shah</Name>
-              <Position>Parliamentarian</Position>
-            </div>
-            <Description>
-              Hello! My name is Priyam Shah and I am the parliamentarian for the Council of Digital
-              Engineers club. I am also a sophomore at Brooklyn Technical High School. A few of my
-              hobbies, in freshman year, were to hang out with my friends and play a lot of
-              basketball. I want to have a productive year, with all of you, at our club and am
-              looking forward to an awesome year.
-            </Description>
-          </Card>
-          <Card>
-            <StyledImage
               fluid={data.wenfeng.childImageSharp.fluid}
               alt="Wen Feng Li"
               objectFit="cover"
@@ -236,6 +218,111 @@ const Team = ({ data }) => {
               LIU Advanced Health Professions major, and I’m very passionate about computer science;
               I love watching a concept materialize as data. I look forward to promoting education
               on CS and keep learning more myself through this great community!
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.priyam.childImageSharp.fluid}
+              alt="Priyam Shah"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Priyam Shah</Name>
+              <Position>Parliamentarian</Position>
+            </div>
+            <Description>
+              Hello! My name is Priyam Shah and I am the parliamentarian for the Council of Digital
+              Engineers club. I am also a sophomore at Brooklyn Technical High School. A few of my
+              hobbies, in freshman year, were to hang out with my friends and play a lot of
+              basketball. I want to have a productive year, with all of you, at our club and am
+              looking forward to an awesome year.
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.melanie.childImageSharp.fluid}
+              alt="LangNi Mai"
+              objectFit="cover"
+            />
+            <div>
+              <Name>LangNi Mai</Name>
+              <Position>Graphic design</Position>
+            </div>
+            <Description>
+              Hi! My name is LangNi (but I prefer to be called Melanie), and I'm one of the new
+              graphic designers for CODE. Currently, I'm in my sophomore year at Brooklyn Tech, but
+              I'm planning on going into a software engineering major. I enjoy doing personal
+              projects and drawing in my free time. I look forward to working with this club!
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.kateri.childImageSharp.fluid}
+              alt="Kateri Ngo"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Kateri Ngo</Name>
+              <Position>Graphic design</Position>
+            </div>
+            <Description>
+              Hi everyone! My name is Kateri Ngo and I'll be a graphic designer at C.O.D.E. Right
+              now, I'm a sophomore and I plan on going into the Mechatronics and Robotics major. I'm
+              very passionate about design and I love to draw in my free time. I can't wait to see
+              what the upcoming years of this club has to offer and I'd love to learn about more
+              about computer science with the rest of you. Hope to see you in our future meetings!
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.santiago.childImageSharp.fluid}
+              alt="Santiago Vira"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Santiago Vira</Name>
+              <Position>Computer science</Position>
+            </div>
+            <Description>
+              Hi, my name is Santiago. I am a Computer Science instructor for the Council of Digital
+              Engineers. I am a freshman at Brooklyn Technical High School. I enjoy programming and
+              electronics, and I especially enjoy putting those two together. I plan on going into
+              the Mechatronics major in junior year, but who knows.
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.katelyn.childImageSharp.fluid}
+              alt="Katelyn Leung"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Katelyn Leung</Name>
+              <Position>Graphic design</Position>
+            </div>
+            <Description>
+              Hi everybody! My name is Katelyn Leung and I’m a graphic designer! I am currently a
+              junior in the Software Engineering major. I am so excited to join this club because I
+              think that technology and software has the ability to make people’s lives happier and
+              easier. I can’t wait to work with everybody and have a great year!
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.dashiell.childImageSharp.fluid}
+              alt="Dashiell Elliott"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Dashiell Elliott</Name>
+              <Position>Computer science</Position>
+            </div>
+            <Description>
+              Hello! My name is Dashiell Elliott and I am a Computer Science Instructor here at
+              C.O.D.E, as well as a Sophomore at Brooklyn Tech. I am currently interested in
+              competitive programming and enjoy introducing people to the wonderful world of
+              computer science. I am excited to work with all of you and help you along your
+              journey!
             </Description>
           </Card>
         </GridWrapper>

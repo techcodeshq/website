@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Head, SmoothScroll, Cursor, Footer, Nav } from '@components';
+import { Head, SmoothScroll, Footer, Nav } from '@components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GlobalStyle } from '@styles';
 
@@ -36,7 +36,6 @@ const Layout = ({ children, location }) => {
       <Head />
       <GlobalStyle />
       <SmoothScroll callbacks={location} />
-      <Cursor />
 
       {loading ? null : (
         <AnimatePresence>

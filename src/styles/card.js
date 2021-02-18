@@ -14,7 +14,7 @@ const Card = styled.div`
     padding: 75px;
     width: 100%;
   `};
-  ${media.tablet`padding: 42px 36px;`};
+  ${media.tablet`padding: 16px 16px;`};
 `;
 
 export default Card;

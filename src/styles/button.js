@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const StyledGatsbyLink = styled(Link)`
   display: inline;
@@ -20,7 +19,7 @@ const StyledGatsbyLink = styled(Link)`
   }
 `;
 
-const StyledALink = styled(OutboundLink)`
+const StyledALink = styled.a`
   display: inline;
   font-size: inherit;
   color: var(--text);

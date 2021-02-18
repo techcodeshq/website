@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { media, Container, Section, Card } from '@styles';
 
 const CardsWrapper = styled.div`
@@ -31,7 +30,7 @@ const TextWrapper = styled(Link)`
     text-decoration: underline;
   }
 `;
-const TextWrapperA = styled(OutboundLink)`
+const TextWrapperA = styled.a`
   text-align: center;
   color: var(--text);
 

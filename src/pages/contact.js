@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const StyledSection = styled(Section)`
   padding-top: 15rem;
@@ -36,12 +35,12 @@ const ContactPage = () => {
             👋{' '}
           </span>
           Have an idea, question, or just want to talk? You can{' '}
-          <OutboundLink
+          <a
             href="mailto:team@techcodes.org?subject=Hello!"
             target="_blank"
             rel="noopener noreferrer">
             contact us
-          </OutboundLink>{' '}
+          </a>{' '}
           at any time!
         </BigText>
       </Container>
