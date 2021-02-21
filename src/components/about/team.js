@@ -246,7 +246,7 @@ const Team = ({ data }) => {
             />
             <div>
               <Name>LangNi Mai</Name>
-              <Position>Graphic design</Position>
+              <Position>Marketing Team</Position>
             </div>
             <Description>
               Hi! My name is LangNi (but I prefer to be called Melanie), and I'm one of the new
@@ -263,7 +263,7 @@ const Team = ({ data }) => {
             />
             <div>
               <Name>Kateri Ngo</Name>
-              <Position>Graphic design</Position>
+              <Position>Marketing Team</Position>
             </div>
             <Description>
               Hi everyone! My name is Kateri Ngo and I'll be a graphic designer at C.O.D.E. Right
@@ -281,7 +281,7 @@ const Team = ({ data }) => {
             />
             <div>
               <Name>Santiago Vira</Name>
-              <Position>Computer science</Position>
+              <Position>Logistics Team</Position>
             </div>
             <Description>
               Hi, my name is Santiago. I am a Computer Science instructor for the Council of Digital
@@ -298,7 +298,7 @@ const Team = ({ data }) => {
             />
             <div>
               <Name>Katelyn Leung</Name>
-              <Position>Graphic design</Position>
+              <Position>Marketing Team</Position>
             </div>
             <Description>
               Hi everybody! My name is Katelyn Leung and I’m a graphic designer! I am currently a
@@ -315,7 +315,7 @@ const Team = ({ data }) => {
             />
             <div>
               <Name>Dashiell Elliott</Name>
-              <Position>Computer science</Position>
+              <Position>Logistics Team</Position>
             </div>
             <Description>
               Hello! My name is Dashiell Elliott and I am a Computer Science Instructor here at
