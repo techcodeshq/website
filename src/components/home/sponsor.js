@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { media, Container, Section, Card, Button } from '@styles';
 
+import Linode from '@images/sponsors/linode.svg';
 import GoDaddy from '@images/sponsors/godaddy.png';
 import StreamYard from '@images/sponsors/streamyard.svg';
 import HackClubBank from '@images/sponsors/hackclubbank.svg';
@@ -115,9 +116,10 @@ const Sponsor = () => {
                 to offer. It is with their help that CODE can continue to bring computer science to
                 those who need it most and strengthen their passion.
               </Description>
-              <Button to="/sponsors">Sponsor us</Button>
+              <Button to="/sponsors">Explore sponsors</Button>
             </ContentWrapper>
             <ImageContainer>
+              <SponsorImage src={Linode} alt="Linode" />
               <SponsorImage src={HackClubBank} alt="Hack Club Bank" />
               <SponsorImage src={StreamYard} alt="Stream Yard" />
               <SponsorImage src={GoDaddy} alt="GoDaddy" />

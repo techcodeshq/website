@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import { Hero } from '@components/sponsors';
+import { Hero, List } from '@components/sponsors';
 
 const SponsorsPage = ({ data }) => {
   return (
@@ -9,6 +9,7 @@ const SponsorsPage = ({ data }) => {
       <Helmet title="Sponsors" />
       <div data-scroll-section>
         <Hero data={data} />
+        <List />
       </div>
     </>
   );

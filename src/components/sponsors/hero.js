@@ -4,13 +4,14 @@ import { Section, Container, Button, media } from '@styles';
 import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+  padding-top: 10rem;
   overflow-x: hidden;
   min-height: 60rem;
 
   ${media.tablet`max-height: 40rem;`};
-  ${media.thone`padding-top: 10rem;`};
+  ${media.thone`
+    padding-top: 10rem;
+  `};
 `;
 const BigText = styled.h1`
   font-weight: bold;
