@@ -67,7 +67,7 @@ const Hero = ({ data }) => {
           <Col bigger>
             <BigText>We rely on our sponsors to help bring STEM education to students.</BigText>
             <Description>
-              Sponsors are the at the core of our organization. Thanks to them, we’re able to
+              Sponsors are at the core of our organization. Thanks to them, we’re able to
               continue to spreading computer science education to students around the nation.
             </Description>
             <ButtonWrapper>
