@@ -4,6 +4,7 @@ import IconGitHub from './github';
 import IconInstagram from './instagram';
 import IconLinkedin from './linkedin';
 import IconYoutube from './youtube';
+import IconTwitter from './twitter';
 
 const FormattedIcon = ({ name }) => {
   switch (name) {
@@ -15,6 +16,8 @@ const FormattedIcon = ({ name }) => {
       return <IconLinkedin />;
     case 'youtube':
       return <IconYoutube />;
+    case 'twitter':
+      return <IconTwitter />;
     default:
       return null;
   }

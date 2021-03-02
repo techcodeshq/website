@@ -144,6 +144,9 @@ const Footer = () => {
                 <a href="https://github.com/CodeBTHS" target="_blank" rel="noopener noreferrer">
                   <FormattedIcon name="github" />
                 </a>
+                <a href="https://twitter.com/bthscode" target="_blank" rel="noopener noreferrer">
+                  <FormattedIcon name="twitter" />
+                </a>
               </Socials>
             </Col>
           </RowInRow>
