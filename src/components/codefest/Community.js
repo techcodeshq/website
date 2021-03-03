@@ -67,14 +67,10 @@ const Main = styled.div`
   min-height: 10vh;
 `;
 
-const NewContainer = styled.Container`
-  padding: 0 !important;
-`;
-
 const Community = ({ data }) => {
   return (
     <StyledSection>
-      <NewContainer max>
+      <Container max>
         <Col max>
           <Row>
             <StyledImage src={Shapes} alt="hello" />
@@ -83,7 +79,7 @@ const Community = ({ data }) => {
             <Main></Main>
           </Row>
         </Col>
-      </NewContainer>
+      </Container>
     </StyledSection>
   );
 };
