@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Hero, Community, Speakers } from '@components/codefest';
+import { Hero, Community, Speakers, Prizes, Contacts, Sponsors } from '@components/codefest';
 
 const codefest = ({ data }) => {
   return (
@@ -14,6 +14,15 @@ const codefest = ({ data }) => {
       </div>
       <div data-scroll-section>
         <Speakers data={data} />
+      </div>
+      <div data-scroll-section>
+        <Prizes data={data} />
+      </div>
+      <div data-scroll-section>
+        <Contacts data={data} />
+      </div>
+      <div data-scroll-section>
+        <Sponsors data={data} />
       </div>
     </>
   );

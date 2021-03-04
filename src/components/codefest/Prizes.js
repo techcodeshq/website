@@ -45,7 +45,7 @@ const Row = styled.div`
 `;
 const Col = styled.div`
   flex: 0 0 auto;
-  width: ${props => (props.max ? '100%' : props.bigger ? '60%' : '40%')};
+  width: ${props => (props.max ? '100%' : props.bigger ? '60%' : '30%')};
   align-items: center;
   justify-content: center;
 
@@ -53,20 +53,56 @@ const Col = styled.div`
 `;
 
 const Main = styled.div`
-  background-color: #ffe767;
+  background-color: #5426d7;
   width: 100% !important;
   padding: 19vh 12vw;
   min-height: 60vh;
 `;
-const Speakers = ({ data }) => {
+const Prizes = ({ data }) => {
   return (
     <StyledSection>
       <Container max style={{ padding: 0 }}>
         <Col max>
           <Row>
             <Main>
-              <BigText black>Speakers and workshops</BigText>
-              <Description black>Coming soon</Description>
+              <Row>
+                <Col>
+                  <BigText>2nd Place</BigText>
+                  <Description>
+                    $160 Vist Gift Card
+                    <br />
+                    1Password Membership
+                    <br />
+                    Repl.it Hacker Plan
+                  </Description>
+                </Col>
+                <Col>
+                  <BigText>1st Place</BigText>
+                  <Description>
+                    $260 Visa Gift Card
+                    <br />
+                    Wolfram | One Person Edition
+                    <br />
+                    Wolfram | Alpha Pro
+                    <br />
+                    1Password Membership
+                    <br />
+                    Repl.it Hacker Plan
+                    <br />
+                    $50 Amazon Gift Card
+                  </Description>
+                </Col>
+                <Col>
+                  <BigText>3rd Place</BigText>
+                  <Description>
+                    $95 Visa Gift Card
+                    <br />
+                    Repl.it Hacker Plan
+                  </Description>
+                </Col>
+              </Row>
+
+              <BigText>Raffle winner gets AirPods and 24 premium months of Framer</BigText>
             </Main>
           </Row>
         </Col>
@@ -75,4 +111,4 @@ const Speakers = ({ data }) => {
   );
 };
 
-export default Speakers;
+export default Prizes;

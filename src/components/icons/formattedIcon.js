@@ -5,6 +5,7 @@ import IconInstagram from './instagram';
 import IconLinkedin from './linkedin';
 import IconYoutube from './youtube';
 import IconTwitter from './twitter';
+import IconDiscord from './discord';
 
 const FormattedIcon = ({ name }) => {
   switch (name) {
@@ -18,6 +19,8 @@ const FormattedIcon = ({ name }) => {
       return <IconYoutube />;
     case 'twitter':
       return <IconTwitter />;
+    case 'discord':
+      return <IconDiscord />;
     default:
       return null;
   }
