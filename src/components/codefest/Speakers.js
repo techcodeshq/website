@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const StyledSection = styled(Section)`
   overflow-x: hidden;
-  min-height: 20rem;
+  min-height: 60rem;
   padding: 0 !important;
   margin: 0 !important;
 
@@ -54,62 +54,22 @@ const Col = styled.div`
 
   ${media.tablet`width: 100%;`};
 `;
-const StyledImage = styled.img`
-  width: 90vw;
-  z-index: 1;
-  position: absolute;
-  top: -19vw;
-`;
 
 const Main = styled.div`
-  background-color: #3c61af;
+  background-color: #ffe767;
   width: 100% !important;
   padding: 19vh 12vw;
   min-height: 60vh;
 `;
-const BaseWrapper = styled(motion.div)`
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-`;
-
-const ShapesWrapper = styled(BaseWrapper)`
-  width: 100%;
-  transform: rotate(1deg);
-  display: flex;
-  justify-content: center;
-`;
-
-const Community = ({ data }) => {
+const Speakers = ({ data }) => {
   return (
-    <StyledSection style={{ padding: 0, margin: 0 }}>
+    <StyledSection>
       <Container max style={{ padding: 0 }}>
         <Col max>
           <Row>
-            <ShapesWrapper
-              initial={{ y: 0 }}
-              animate={{ y: 10 }}
-              transition={{ duration: 1.7, yoyo: Infinity }}>
-              <StyledImage src={Shapes} alt="hello" data-scroll data-scroll-speed={0.25} />
-            </ShapesWrapper>
-          </Row>
-          <Row>
             <Main>
-              <BigText>
-                CodeFest is a community of students, fighting for a better future through computer
-                science.
-              </BigText>
-              <Description>
-                CODE is dedicated to fostering computer science education to students of all
-                backgrounds and expose them to the creativity and innovation technology brings. By
-                hosting numerous activities, such as guest speaker events, workshops, hackathons,
-                and programming competitions, we are able to fulfill our goal on a wider scale.
-                Although we are primarily based in the NYC Metropolitan Area, we are expanding our
-                reach through numerous partnerships and corporations.
-              </Description>
+              <BigText black>Speakers and workshops</BigText>
+              <Description black>Coming soon</Description>
             </Main>
           </Row>
         </Col>
@@ -118,4 +78,4 @@ const Community = ({ data }) => {
   );
 };
 
-export default Community;
+export default Speakers;

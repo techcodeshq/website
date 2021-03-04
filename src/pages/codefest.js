@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Hero, Community } from '@components/codefest';
+import { Hero, Community, Speakers } from '@components/codefest';
 
 const codefest = ({ data }) => {
   return (
@@ -11,6 +11,9 @@ const codefest = ({ data }) => {
       </div>
       <div data-scroll-section>
         <Community data={data} />
+      </div>
+      <div data-scroll-section>
+        <Speakers data={data} />
       </div>
     </>
   );
