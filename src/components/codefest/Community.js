@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
 import Img from 'gatsby-image';
 import Shapes from '@images/codefest/Shapes.svg';
+import { motion } from 'framer-motion';
 
 const StyledSection = styled(Section)`
   padding-top: 15rem;
@@ -14,11 +15,12 @@ const StyledSection = styled(Section)`
   ${media.thone`padding-top: 10rem;`};
 `;
 const BigText = styled.h1`
-  font-weight: bold;
-  font-size: 80px;
+  font-weight: 500;
+  font-size: 65px;
   letter-spacing: -2px;
   line-height: 100%;
   text-align: center !important;
+  color: ${props => (props.black ? 'black' : 'white')};
 
   ${media.massive`font-size: 70px;`};
   ${media.thone`font-size: 48px;`};
@@ -28,7 +30,7 @@ const Description = styled.p`
   max-width: 90%;
   line-height: 146%;
   text-align: center !important;
-
+  color: ${props => (props.black ? 'black' : 'white')};
   ${media.tablet`
     max-width: 100%;
     font-size: 24px;
@@ -54,29 +56,62 @@ const Col = styled.div`
   ${media.tablet`width: 100%;`};
 `;
 const StyledImage = styled.img`
-  width: 100vw;
+  width: 90vw;
   z-index: 1;
-
-  ${media.tablet`display: none;`};
+  position: absolute;
+  top: -19vw;
 `;
 
 const Main = styled.div`
   background-color: #3c61af;
-  width: 100vw !important;
-  padding: 20px;
-  min-height: 10vh;
+  width: 100% !important;
+  padding: 19vh 12vw;
+  min-height: 60vh;
+`;
+const BaseWrapper = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
+const ShapesWrapper = styled(BaseWrapper)`
+  width: 100%;
+  transform: rotate(1deg);
+  display: flex;
+  justify-content: center;
 `;
 
 const Community = ({ data }) => {
   return (
     <StyledSection>
-      <Container max>
+      <Container max style={{ padding: 0 }}>
         <Col max>
           <Row>
-            <StyledImage src={Shapes} alt="hello" />
+            <ShapesWrapper
+              initial={{ y: 0 }}
+              animate={{ y: 10 }}
+              transition={{ duration: 1.7, yoyo: Infinity }}>
+              <StyledImage src={Shapes} alt="hello" data-scroll data-scroll-speed={0.25} />
+            </ShapesWrapper>
           </Row>
           <Row>
-            <Main></Main>
+            <Main>
+              <BigText>
+                CodeFest is a community of students, fighting for a better future through computer
+                science.
+              </BigText>
+              <Description>
+                CODE is dedicated to fostering computer science education to students of all
+                backgrounds and expose them to the creativity and innovation technology brings. By
+                hosting numerous activities, such as guest speaker events, workshops, hackathons,
+                and programming competitions, we are able to fulfill our goal on a wider scale.
+                Although we are primarily based in the NYC Metropolitan Area, we are expanding our
+                reach through numerous partnerships and corporations.
+              </Description>
+            </Main>
           </Row>
         </Col>
       </Container>
