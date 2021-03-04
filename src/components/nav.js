@@ -200,7 +200,7 @@ class Nav extends Component {
                   <NavLink to="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/events">Events</NavLink>
+                  <NavLink to="/codefest">CodeFest</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink to="/sponsors">Sponsors</NavLink>

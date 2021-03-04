@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
-import Img from 'gatsby-image';
 import Shapes from '@images/codefest/Shapes.svg';
 import { motion } from 'framer-motion';
 
@@ -10,8 +9,6 @@ const StyledSection = styled(Section)`
   min-height: 20rem;
   padding: 0 !important;
   margin: 0 !important;
-
-  ${media.tablet`max-height: 40rem;`};
 `;
 const BigText = styled.h1`
   font-weight: 500;
@@ -55,17 +52,19 @@ const Col = styled.div`
   ${media.tablet`width: 100%;`};
 `;
 const StyledImage = styled.img`
-  width: 90vw;
+  width: 100%;
   z-index: 1;
   position: absolute;
-  top: -19vw;
+  top: -20.3rem;
 `;
-
 const Main = styled.div`
   background-color: #3c61af;
   width: 100% !important;
   padding: 19vh 12vw;
-  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 const BaseWrapper = styled(motion.div)`
   position: absolute;
@@ -75,25 +74,20 @@ const BaseWrapper = styled(motion.div)`
   align-items: flex-start;
   justify-content: flex-start;
 `;
-
 const ShapesWrapper = styled(BaseWrapper)`
-  width: 100%;
-  transform: rotate(1deg);
+  width: 95.9rem;
   display: flex;
   justify-content: center;
 `;
 
-const Community = ({ data }) => {
+const Community = () => {
   return (
     <StyledSection style={{ padding: 0, margin: 0 }}>
       <Container max style={{ padding: 0 }}>
         <Col max>
           <Row>
-            <ShapesWrapper
-              initial={{ y: 0 }}
-              animate={{ y: 10 }}
-              transition={{ duration: 1.7, yoyo: Infinity }}>
-              <StyledImage src={Shapes} alt="hello" data-scroll data-scroll-speed={0.25} />
+            <ShapesWrapper>
+              <StyledImage src={Shapes} alt="Shapes" data-scroll data-scroll-speed={0.25} />
             </ShapesWrapper>
           </Row>
           <Row>

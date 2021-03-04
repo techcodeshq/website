@@ -7,8 +7,6 @@ const StyledSection = styled(Section)`
   min-height: 20rem;
   padding: 0 !important;
   margin: 0 !important;
-
-  ${media.tablet`max-height: 40rem;`};
 `;
 const BigText = styled.h1`
   font-weight: 500;
@@ -55,8 +53,7 @@ const Col = styled.div`
 const Main = styled.div`
   background-color: #5426d7;
   width: 100% !important;
-  padding: 19vh 12vw;
-  min-height: 60vh;
+  padding: 10vh 12vw;
 `;
 const Prizes = ({ data }) => {
   return (
