@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, Container, media } from '@styles';
+import { Section, Container, Button, media } from '@styles';
 
 const StyledSection = styled(Section)`
   padding-top: 15rem;
@@ -32,7 +32,6 @@ const Description = styled.p`
   `};
   ${media.thone`font-size: 19px;`};
 `;
-
 const RedText = styled.p`
   max-width: 90%;
   line-height: 146%;
@@ -94,6 +93,14 @@ const Hero = () => {
               The last year had been unlike any other; therefore, we’re hosting a hackathon unlike
               any other. Get in your pajamas, lay down in your bed, and let’s build something cool!
             </Description>
+          </Row>
+          <Row>
+            <Button
+              href="https://docs.google.com/forms/d/e/1FAIpQLSePqf41QqAR2zgBeV4TFAX_H9p5ozTIJ-6M6LlMT_t9KJCTjA/viewform"
+              target="_blank"
+              rel="noopener noreferrer">
+              Sign up now!
+            </Button>
           </Row>
         </Col>
       </Container>
