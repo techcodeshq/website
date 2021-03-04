@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
 
+import EchoAR from '@images/sponsors/echoar.png';
+import Linode from '@images/sponsors/linode.svg';
+import GoDaddy from '@images/sponsors/godaddy.png';
+import StreamYard from '@images/sponsors/streamyard.svg';
+import HackClubBank from '@images/sponsors/hackclubbank.svg';
+
 const StyledSection = styled(Section)`
   overflow-x: hidden;
   min-height: 40rem;
@@ -56,6 +62,35 @@ const Main = styled.div`
   padding: 19vh 12vw;
   min-height: 60vh;
 `;
+
+const SponsorImage = styled.img`
+  margin-top: 0.5rem;
+  :not(:first-child) {
+    margin-left: 1.5rem;
+  }
+`;
+
+const SponsorRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  :first-child {
+    img {
+      width: 40rem;
+    }
+  }
+
+  :not(:first-child) {
+    padding-top: 3rem;
+
+    img {
+      width: 10rem;
+    }
+  }
+`;
 const Prizes = ({ data }) => {
   return (
     <StyledSection>
@@ -63,6 +98,15 @@ const Prizes = ({ data }) => {
         <Col max>
           <Main>
             <BigText black>Our beloved sponsors supporting us for this hackathon.</BigText>
+            <SponsorRow>
+              <SponsorImage src={Linode} alt="Linode" />
+            </SponsorRow>
+            <SponsorRow>
+              <SponsorImage src={EchoAR} alt="echoAR" />
+              <SponsorImage src={GoDaddy} alt="GoDaddy" />
+              <SponsorImage src={StreamYard} alt="StreamYard" />
+              <SponsorImage src={HackClubBank} alt="Hackclub Bank" />
+            </SponsorRow>
           </Main>
         </Col>
       </Container>
