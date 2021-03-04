@@ -68,7 +68,7 @@ const Prizes = ({ data }) => {
             <Description
               initial={{ opacity: 0 }}
               animate={hovering === 0 ? { opacity: 1 } : { opacity: 0 }}>
-              Follow our socials for updates
+              Join our Discord for updates
             </Description>
           </DiscordCol>
           <TwitterCol
