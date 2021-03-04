@@ -2,11 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
 
+import OnePassword from '@images/sponsors/1Password.png';
+import Balsamiq from '@images/sponsors/balsamiq.png';
 import EchoAR from '@images/sponsors/echoar.png';
-import Linode from '@images/sponsors/linode.svg';
+import Framer from '@images/sponsors/framer.png';
 import GoDaddy from '@images/sponsors/godaddy.png';
-import StreamYard from '@images/sponsors/streamyard.svg';
 import HackClubBank from '@images/sponsors/hackclubbank.svg';
+import Linode from '@images/sponsors/linode.svg';
+import PrincetonReview from '@images/sponsors/princetonreview.png';
+import ReplIt from '@images/sponsors/replit.svg';
+import StreamYard from '@images/sponsors/streamyard.svg';
+import Wolfram from '@images/sponsors/wolfram.png';
 
 const StyledSection = styled(Section)`
   overflow-x: hidden;
@@ -25,28 +31,6 @@ const BigText = styled.h1`
 
   ${media.massive`font-size: 70px;`};
   ${media.thone`font-size: 48px;`};
-`;
-const Description = styled.p`
-  font-size: 28px;
-  max-width: 90%;
-  line-height: 146%;
-  text-align: center !important;
-  color: ${props => (props.black ? 'black' : 'white')};
-  ${media.tablet`
-    max-width: 100%;
-    font-size: 24px;
-  `};
-  ${media.thone`font-size: 19px;`};
-`;
-const Row = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center !important;
-
-  ${media.tablet`flex-direction: column-reverse;`};
 `;
 const Col = styled.div`
   flex: 0 0 auto;
@@ -77,18 +61,8 @@ const SponsorRow = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 
-  :first-child {
-    img {
-      width: 40rem;
-    }
-  }
-
-  :not(:first-child) {
-    padding-top: 3rem;
-
-    img {
-      width: 10rem;
-    }
+  img {
+    width: ${props => (props.paid ? '20rem' : props.gave ? '9rem' : '8rem')};
   }
 `;
 const Prizes = ({ data }) => {
@@ -98,11 +72,19 @@ const Prizes = ({ data }) => {
         <Col max>
           <Main>
             <BigText black>Our beloved sponsors supporting us for this hackathon.</BigText>
-            <SponsorRow>
+            <SponsorRow paid>
               <SponsorImage src={Linode} alt="Linode" />
+              <SponsorImage src={PrincetonReview} alt="The Princeton Review" />
+            </SponsorRow>
+            <SponsorRow gave>
+              <SponsorImage src={EchoAR} alt="echoAR" />
+              <SponsorImage src={OnePassword} alt="OnePassword" />
+              <SponsorImage src={Wolfram} alt="Wolfram" />
+              <SponsorImage src={Framer} alt="Framer" />
+              <SponsorImage src={ReplIt} alt="ReplIt" />
             </SponsorRow>
             <SponsorRow>
-              <SponsorImage src={EchoAR} alt="echoAR" />
+              <SponsorImage src={Balsamiq} alt="Balsamiq" />
               <SponsorImage src={GoDaddy} alt="GoDaddy" />
               <SponsorImage src={StreamYard} alt="StreamYard" />
               <SponsorImage src={HackClubBank} alt="Hackclub Bank" />
