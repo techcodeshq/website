@@ -90,7 +90,7 @@ const Hero = () => {
           </Row>
           <Row>
             <Description>
-              The last year had been unlike any other; therefore, we’re hosting a hackathon unlike
+              The last year has been unlike any other; therefore, we’re hosting a hackathon unlike
               any other. Get in your pajamas, lay down in your bed, and let’s build something cool!
             </Description>
           </Row>
