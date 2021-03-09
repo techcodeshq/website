@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Section, Container, media } from '@styles';
-import Shapes from '@images/codefest/Shapes.svg';
-import { motion } from 'framer-motion';
+import Img from 'gatsby-image';
 
 const StyledSection = styled(Section)`
   overflow-x: hidden;
@@ -51,11 +50,11 @@ const Col = styled.div`
 
   ${media.tablet`width: 100%;`};
 `;
-const StyledImage = styled.img`
+const StyledImage = styled(Img)`
   width: 100%;
   z-index: 1;
   position: absolute;
-  top: -20.3rem;
+  top: -20.75rem;
 `;
 const Main = styled.div`
   background-color: #3c61af;
@@ -66,7 +65,7 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const BaseWrapper = styled(motion.div)`
+const BaseWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 10px;
@@ -80,14 +79,14 @@ const ShapesWrapper = styled(BaseWrapper)`
   justify-content: center;
 `;
 
-const Community = () => {
+const Community = ({ data }) => {
   return (
     <StyledSection style={{ padding: 0, margin: 0 }}>
       <Container max style={{ padding: 0 }}>
         <Col max>
           <Row>
-            <ShapesWrapper>
-              <StyledImage src={Shapes} alt="Shapes" data-scroll data-scroll-speed={0.25} />
+            <ShapesWrapper data-scroll data-scroll-speed={0.25}>
+              <StyledImage fluid={data.shapes.childImageSharp.fluid} alt="Shapes" />
             </ShapesWrapper>
           </Row>
           <Row>
@@ -97,12 +96,13 @@ const Community = () => {
                 science.
               </BigText>
               <Description>
-                CODE is dedicated to fostering computer science education to students of all
-                backgrounds and expose them to the creativity and innovation technology brings. By
-                hosting numerous activities, such as guest speaker events, workshops, hackathons,
-                and programming competitions, we are able to fulfill our goal on a wider scale.
-                Although we are primarily based in the NYC Metropolitan Area, we are expanding our
-                reach through numerous partnerships and corporations.
+                Calling all innovative programmers, designers, and developers! CODE is proud to
+                announce its very own 24-hour virtual hackathon: CodeFest! This event will take
+                place virtually on March 14th, 17th, and 20th with the theme being Humanitarian
+                Issues!∂ Everyone is welcome! CodeFest will allow creative individuals with any
+                background or experience in coding to take part in thought-provoking challenges,
+                work with like-minded and diverse groups of people, as well as have the ability to
+                win up to thousands of dollars in prizes!
               </Description>
             </Main>
           </Row>

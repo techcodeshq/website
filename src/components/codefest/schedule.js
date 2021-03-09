@@ -14,7 +14,7 @@ const BigText = styled.h1`
   letter-spacing: -2px;
   line-height: 100%;
   text-align: center !important;
-  color: ${props => (props.black ? 'black' : 'white')};
+  color: var(--text);
 
   ${media.massive`font-size: 70px;`};
   ${media.thone`font-size: 48px;`};
@@ -23,7 +23,8 @@ const Description = styled.p`
   font-size: 28px;
   line-height: 146%;
   text-align: center !important;
-  color: ${props => (props.black ? 'black' : 'white')};
+  color: var(--text);
+
   ${media.tablet`font-size: 24px;`};
   ${media.thone`font-size: 19px;`};
 `;
@@ -35,23 +36,23 @@ const Row = styled.div`
   width: 100%;
   text-align: center !important;
 
-  ${media.tablet`flex-direction: column-reverse;`};
+  ${media.tablet`flex-direction: column;`};
 `;
 const Col = styled.div`
   flex: 0 0 auto;
-  width: ${props => (props.max ? '100%' : props.bigger ? '60%' : '30%')};
+  width: 100%;
   align-items: center;
   justify-content: center;
 
   ${media.tablet`width: 100%;`};
 `;
 const Main = styled.div`
-  background-color: var(--purple);
+  background-color: var(--blue);
   width: 100% !important;
   padding: 10vh 12vw;
 `;
 
-const Prizes = () => {
+const Schedule = () => {
   return (
     <StyledSection>
       <Container max style={{ padding: 0 }}>
@@ -60,42 +61,54 @@ const Prizes = () => {
             <Main>
               <Row>
                 <Col>
-                  <BigText>2nd Place</BigText>
+                  <BigText>Day 1</BigText>
                   <Description>
-                    $160 Vist Gift Card
+                    March 14th | 10-8PM EST
                     <br />
-                    1Password Membership
+                    10 AM-12PM | Opening Ceremony
                     <br />
-                    Repl.it Hacker Plan
+                    12-2PM | Hack Time!
+                    <br />
+                    2-3PM | Lunch!
+                    <br />
+                    3-4PM | EchoAR Workshop
+                    <br />
+                    4-7PM | Hack Time!
+                    <br />
+                    7-8PM | Game Night!
                   </Description>
                 </Col>
                 <Col>
-                  <BigText>1st Place</BigText>
+                  <BigText>Day 2</BigText>
                   <Description>
-                    $260 Visa Gift Card
+                    4-5PM | Keynote Speaker #1 - MacKenzie Fisher
                     <br />
-                    Wolfram | One Person Edition
+                    5-6PM | Artificial Intelligence Workshop
                     <br />
-                    Wolfram | Alpha Pro
+                    6-7PM | Keynote Speaker #2 - Chris Sean
                     <br />
-                    1Password Membership
-                    <br />
-                    Repl.it Hacker Plan
-                    <br />
-                    $50 Amazon Gift Card
+                    7-8PM | Web Development Workshop
                   </Description>
                 </Col>
                 <Col>
-                  <BigText>3rd Place</BigText>
+                  <BigText>Day 3</BigText>
                   <Description>
-                    $95 Visa Gift Card
+                    10-11:30AM | Opening Ceremony
                     <br />
-                    Repl.it Hacker Plan
+                    12-1PM | Jacob Thomas, Game Developer
+                    <br />
+                    1-2PM | Game Development Workshop
+                    <br />
+                    2:30PM | Deadline for All Projects on Devpost
+                    <br />
+                    3-6PM | Presentations & Judging
+                    <br />
+                    6-7PM | Closing Ceremony
+                    <br />
+                    7-8PM | Movie Night
                   </Description>
                 </Col>
               </Row>
-
-              <BigText>Raffle winner gets AirPods and 24 premium months of Framer</BigText>
             </Main>
           </Row>
         </Col>
@@ -104,4 +117,4 @@ const Prizes = () => {
   );
 };
 
-export default Prizes;
+export default Schedule;

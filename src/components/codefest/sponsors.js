@@ -61,7 +61,7 @@ const SponsorRow = styled.div`
     width: ${props => (props.paid ? '20rem' : '9rem')};
   }
 `;
-const Prizes = ({ data }) => {
+const Prizes = () => {
   return (
     <StyledSection>
       <Container max style={{ padding: 0 }}>

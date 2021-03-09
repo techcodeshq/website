@@ -45,11 +45,11 @@ const BaseCol = styled.a`
 const DiscordCol = styled(BaseCol)`
   background-color: #7289da;
 `;
-const TwitterCol = styled(BaseCol)`
-  background-color: #1da1f2;
+const InstaCol = styled(BaseCol)`
+  background-color: #e1306c;
 `;
 
-const Prizes = ({ data }) => {
+const Prizes = () => {
   const [hovering, setHovering] = useState(null);
 
   return (
@@ -71,21 +71,21 @@ const Prizes = ({ data }) => {
               Join our Discord for updates
             </Description>
           </DiscordCol>
-          <TwitterCol
+          <InstaCol
             onMouseEnter={() => setHovering(1)}
             onMouseLeave={() => setHovering(null)}
-            href="https://twitter.com/bthscode"
+            href="https://instagram.com/bthscode"
             target="_blank"
             rel="noopener noreferrer">
             <motion.div initial={{ y: 25 }} animate={hovering === 1 ? { y: -20 } : { y: 25 }}>
-              <FormattedIcon name="twitter" />
+              <FormattedIcon name="instagram" />
             </motion.div>
             <Description
               initial={{ opacity: 0 }}
               animate={hovering === 1 ? { opacity: 1 } : { opacity: 0 }}>
               Follow our socials for updates
             </Description>
-          </TwitterCol>
+          </InstaCol>
         </FlexWrapper>
       </Container>
     </StyledSection>

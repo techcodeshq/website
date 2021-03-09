@@ -1,41 +1,52 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Hero, Community, Speakers, Prizes, Contacts, Sponsors } from '@components/codefest';
+import {
+  Hero,
+  Community,
+  Speakers,
+  Prizes,
+  Contacts,
+  Sponsors,
+  Schedule,
+} from '@components/codefest';
 
-const codefest = ({ data }) => {
+const CodeFest = ({ data }) => {
   return (
     <>
       <Helmet title="Events" />
       <div data-scroll-section>
-        <Hero data={data} />
+        <Hero />
       </div>
       <div data-scroll-section>
         <Community data={data} />
       </div>
       <div data-scroll-section>
-        <Speakers data={data} />
+        <Schedule />
       </div>
       <div data-scroll-section>
-        <Prizes data={data} />
+        <Prizes />
       </div>
       <div data-scroll-section>
-        <Contacts data={data} />
+        <Speakers />
       </div>
       <div data-scroll-section>
-        <Sponsors data={data} />
+        <Contacts />
+      </div>
+      <div data-scroll-section>
+        <Sponsors />
       </div>
     </>
   );
 };
 
-export default codefest;
+export default CodeFest;
 
 export const query = graphql`
   {
-    blast: file(relativePath: { eq: "codefest/Shapes.png" }) {
+    shapes: file(relativePath: { eq: "codefest/Shapes.png" }) {
       childImageSharp {
-        fluid(quality: 60) {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

@@ -34,7 +34,7 @@ const Main = styled.div`
   padding: 10vh 12vw;
 `;
 
-const Speakers = ({ data }) => {
+const Speakers = () => {
   return (
     <StyledSection>
       <Container max style={{ padding: 0 }}>
