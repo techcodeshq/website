@@ -10,15 +10,15 @@ import {
   Schedule,
 } from '@components/codefest';
 
-const CodeFest = ({ data }) => {
+const CodeFest = () => {
   return (
     <>
-      <Helmet title="Events" />
+      <Helmet title="CodeFest" />
       <div data-scroll-section>
         <Hero />
       </div>
       <div data-scroll-section>
-        <Community data={data} />
+        <Community />
       </div>
       <div data-scroll-section>
         <Schedule />
@@ -40,15 +40,3 @@ const CodeFest = ({ data }) => {
 };
 
 export default CodeFest;
-
-export const query = graphql`
-  {
-    shapes: file(relativePath: { eq: "codefest/Shapes.png" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
-    }
-  }
-`;
