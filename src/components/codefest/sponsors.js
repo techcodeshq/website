@@ -7,6 +7,7 @@ import Balsamiq from '@images/sponsors/balsamiq.png';
 import EchoAR from '@images/sponsors/echoar.png';
 import Framer from '@images/sponsors/framer.png';
 import GoDaddy from '@images/sponsors/godaddy.png';
+import InspiritAI from '@images/sponsors/inspiritAI.png';
 import HackClubBank from '@images/sponsors/hackclubbank.svg';
 import Linode from '@images/sponsors/linode.svg';
 import PrincetonReview from '@images/sponsors/princetonreview.png';
@@ -69,6 +70,7 @@ const Prizes = () => {
           <Main>
             <BigText black>Our beloved sponsors supporting us for this hackathon.</BigText>
             <SponsorRow paid>
+              <SponsorImage src={InspiritAI} alt="InspiritAI" />
               <SponsorImage src={Linode} alt="Linode" />
               <SponsorImage
                 src={PrincetonReview}
