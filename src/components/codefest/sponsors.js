@@ -7,6 +7,7 @@ import Balsamiq from '@images/sponsors/balsamiq.png';
 import EchoAR from '@images/sponsors/echoar.png';
 import Framer from '@images/sponsors/framer.png';
 import GoDaddy from '@images/sponsors/godaddy.png';
+import InspiritAI from '@images/sponsors/inspiritAI.png';
 import HackClubBank from '@images/sponsors/hackclubbank.svg';
 import Linode from '@images/sponsors/linode.svg';
 import PrincetonReview from '@images/sponsors/princetonreview.png';
@@ -18,8 +19,6 @@ const StyledSection = styled(Section)`
   overflow-x: hidden;
   min-height: 40rem;
   padding-top: 0 !important;
-
-  ${media.tablet`max-height: 30rem;`};
 `;
 const BigText = styled.h1`
   font-weight: 500;
@@ -40,32 +39,30 @@ const Col = styled.div`
 
   ${media.tablet`width: 100%;`};
 `;
-
 const Main = styled.div`
   width: 100% !important;
-  padding: 19vh 12vw;
+  padding: 10vh 12vw;
   min-height: 60vh;
 `;
-
 const SponsorImage = styled.img`
   margin-top: 0.5rem;
   :not(:first-child) {
     margin-left: 1.5rem;
   }
 `;
-
 const SponsorRow = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 3rem;
 
   img {
-    width: ${props => (props.paid ? '20rem' : props.gave ? '9rem' : '8rem')};
+    width: ${props => (props.paid ? '20rem' : '9rem')};
   }
 `;
-const Prizes = ({ data }) => {
+const Prizes = () => {
   return (
     <StyledSection>
       <Container max style={{ padding: 0 }}>
@@ -73,13 +70,18 @@ const Prizes = ({ data }) => {
           <Main>
             <BigText black>Our beloved sponsors supporting us for this hackathon.</BigText>
             <SponsorRow paid>
+              <SponsorImage src={InspiritAI} alt="InspiritAI" />
               <SponsorImage src={Linode} alt="Linode" />
-              <SponsorImage src={PrincetonReview} alt="The Princeton Review" />
+              <SponsorImage
+                src={PrincetonReview}
+                alt="The Princeton Review"
+                style={{ width: '15rem' }}
+              />
             </SponsorRow>
-            <SponsorRow gave>
-              <SponsorImage src={EchoAR} alt="echoAR" />
+            <SponsorRow>
+              <SponsorImage src={EchoAR} alt="echoAR" style={{ width: '12rem' }} />
               <SponsorImage src={OnePassword} alt="OnePassword" />
-              <SponsorImage src={Wolfram} alt="Wolfram" />
+              <SponsorImage src={Wolfram} alt="Wolfram" style={{ width: '7rem' }} />
               <SponsorImage src={Framer} alt="Framer" />
               <SponsorImage src={ReplIt} alt="ReplIt" />
             </SponsorRow>

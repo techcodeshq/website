@@ -112,7 +112,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
               <NavLink to="/about">About</NavLink>
             </NavListItem>
             <NavListItem>
-              <NavLink to="/events">Events</NavLink>
+              <NavLink to="/codefest">CodeFest</NavLink>
             </NavListItem>
             <NavListItem>
               <NavLink to="/sponsors">Sponsors</NavLink>

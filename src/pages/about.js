@@ -122,7 +122,21 @@ export const query = graphql`
         }
       }
     }
+    ismaeel: file(relativePath: { eq: "team/ismaeel.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     melanie: file(relativePath: { eq: "team/melanie.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 40) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    nirjhor: file(relativePath: { eq: "team/nirjhor.png" }) {
       childImageSharp {
         fluid(maxWidth: 100, quality: 40) {
           ...GatsbyImageSharpFluid

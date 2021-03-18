@@ -37,8 +37,8 @@ const Info = ({ data }) => {
               <DefaultText>
                 CODE is a student-run 501(c)(3) nonprofit, for students, by students. Founded by
                 Chanul Dandeniya and Kyrylo Orlov in June 2020, in hopes to rejuvenate and revive
-                student interest in programming in the largest and most prestigous STEM secondary
-                institution, Brooklyn Technical High School, through countless iniatives and
+                student interest in programming in the largest and most prestigious STEM secondary
+                institution, Brooklyn Technical High School, through countless initiatives and
                 programs CODE has now grown and impacted students all across the NYC Metropolitan
                 area
               </DefaultText>

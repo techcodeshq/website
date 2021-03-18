@@ -325,6 +325,41 @@ const Team = ({ data }) => {
               journey!
             </Description>
           </Card>
+          <Card>
+            <StyledImage
+              fluid={data.ismaeel.childImageSharp.fluid}
+              alt="Ismaeel Akram"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Ismaeel Akram</Name>
+              <Position>Logistics Team</Position>
+            </div>
+            <Description>
+              Hey, my name is Ismaeel. I'm a computer science instructor at C.O.D.E. I'm a freshman
+              at Brooklyn Technical High School and having a wonderful time. I've been programming
+              for years and I've recently decided that I would like to teach others! I've recently
+              been looking into neuroscience and I'm having a fun time researching it.
+            </Description>
+          </Card>
+          <Card>
+            <StyledImage
+              fluid={data.nirjhor.childImageSharp.fluid}
+              alt="Nirjhor Nath"
+              objectFit="cover"
+            />
+            <div>
+              <Name>Nirjhor Nath</Name>
+              <Position>Logistics Team</Position>
+            </div>
+            <Description>
+              Hi! My name is Nirjhor Nath and I am Computer Science Instructor at C.O.D.E, and
+              currently a sophomore in Brooklyn Tech. I have been programming for around 3 years,
+              and am currently interested in full stack web development. I intend to go into the
+              Software Development major in my junior year at Tech. I hope to be able to share my
+              passion for programming with all of you!
+            </Description>
+          </Card>
         </GridWrapper>
       </Container>
     </StyledSection>

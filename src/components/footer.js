@@ -153,7 +153,7 @@ const Footer = () => {
           <Logo src={CODELogo} alt="Council of Digital Engineers" />
         </Row>
         <RowBottom>
-          <a href="/press-release.pdf">Download February press release</a>
+          <a href="/press-release.pdf">Download March press release</a>
           <Copy>
             &copy; {currentYear} Council of Digital Engineers. 501(c)(3) nonprofit (EIN: 81-2908499)
           </Copy>
