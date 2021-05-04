@@ -11,13 +11,14 @@ const options = {
 
 const SmoothScroll = callbacks => {
   useEffect(() => {
+    let locomotiveScroll;
+
     setTimeout(() => {
-      let locomotiveScroll;
       locomotiveScroll = new LocomotiveScroll({
         el: document.querySelector('#___gatsby'),
         ...options,
       });
-      locomotiveScroll.update();
+      setTimeout(() => locomotiveScroll.update(), 300);
 
       // Exposing to the global scope for ease of use.
       window.scroll = locomotiveScroll;
@@ -33,11 +34,10 @@ const SmoothScroll = callbacks => {
           document.documentElement.setAttribute('data-at-top', true);
         }
       });
-
-      return () => {
-        if (locomotiveScroll) locomotiveScroll.destroy();
-      };
-    }, 1000);
+    }, 500);
+    return () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+    };
   }, [callbacks]);
 
   return null;

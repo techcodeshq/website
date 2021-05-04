@@ -1,7 +1,7 @@
 {
   "name": "@techcodes/v1",
   "private": true,
-  "description": "THe official Council of Digital Engineers website.",
+  "description": "The official Council of Digital Engineers website.",
   "version": "0.1.0",
   "author": "Kyrylo Orlov <dev@kyryloorlov.com>",
   "dependencies": {
@@ -21,7 +21,7 @@
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
-    "locomotive-scroll": "^4.0.6",
+    "locomotive-scroll": "^4.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

@@ -205,23 +205,6 @@ const Team = ({ data }) => {
           </Card>
           <Card>
             <StyledImage
-              fluid={data.fatim.childImageSharp.fluid}
-              alt="Fatim Majumder"
-              objectFit="cover"
-            />
-            <div>
-              <Name>Fatim Majumder</Name>
-              <Position>Operations Director</Position>
-            </div>
-            <Description>
-              Hello, my name is Fatim Majumder and I’m the Operations Director! I am a junior in the
-              LIU Advanced Health Professions major, and I’m very passionate about computer science;
-              I love watching a concept materialize as data. I look forward to promoting education
-              on CS and keep learning more myself through this great community!
-            </Description>
-          </Card>
-          <Card>
-            <StyledImage
               fluid={data.priyam.childImageSharp.fluid}
               alt="Priyam Shah"
               objectFit="cover"
@@ -323,23 +306,6 @@ const Team = ({ data }) => {
               competitive programming and enjoy introducing people to the wonderful world of
               computer science. I am excited to work with all of you and help you along your
               journey!
-            </Description>
-          </Card>
-          <Card>
-            <StyledImage
-              fluid={data.ismaeel.childImageSharp.fluid}
-              alt="Ismaeel Akram"
-              objectFit="cover"
-            />
-            <div>
-              <Name>Ismaeel Akram</Name>
-              <Position>Logistics Team</Position>
-            </div>
-            <Description>
-              Hey, my name is Ismaeel. I'm a computer science instructor at C.O.D.E. I'm a freshman
-              at Brooklyn Technical High School and having a wonderful time. I've been programming
-              for years and I've recently decided that I would like to teach others! I've recently
-              been looking into neuroscience and I'm having a fun time researching it.
             </Description>
           </Card>
           <Card>
