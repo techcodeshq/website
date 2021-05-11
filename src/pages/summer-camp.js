@@ -9,7 +9,7 @@ const SummerCamp = () => {
     <>
       <Helmet title="Summer Camp" />
       <div data-scroll-section>
-        <Hero name="Summer Camp" date="Your Mother O' Clock" src={Summer} />
+        <Hero name="Summer Camp" date="July 5th-16th, 2021" src={Summer} />
       </div>
       <div data-scroll-section>
         <Description
