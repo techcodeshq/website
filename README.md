@@ -11,4 +11,4 @@ Code under MIT License, assets may not be re-used or re-distributed.
 
 ---
 
-By [@kyryloren](https://kyryloorlov.com) for Council of Digital Engineers, 2021. MIT License.
+By [@kyryloren](https://kyryloorlov.com) and **@SantiagoVira** for Council of Digital Engineers, 2021. MIT License.
