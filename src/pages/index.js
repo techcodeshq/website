@@ -1,29 +1,34 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react';
+import { graphql } from 'gatsby';
+import HomeSection from '@views/home';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const HomePage = ({ data }) => {
+  return <HomeSection data={data} />;
+};
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+export default HomePage;
 
-export default IndexPage
+export const query = graphql`
+  {
+    potion: file(relativePath: { eq: "props/potion.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    folder: file(relativePath: { eq: "props/folder.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    bucket: file(relativePath: { eq: "props/bucket.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    rocket: file(relativePath: { eq: "props/rocket.png" }) {
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+`;
