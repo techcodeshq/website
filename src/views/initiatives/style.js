@@ -13,9 +13,44 @@ export const ListWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2vw;
 `;
+export const HoverWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.4);
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.43, 0.13, 0.23, 0.96) !important;
+
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+`;
 export const ImageWrapper = styled(Link)`
+  position: relative;
+  border-radius: 1vw;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.43, 0.13, 0.23, 0.96) !important;
+  z-index: 2;
+
   img {
+    transition: all 0.5s cubic-bezier(0.43, 0.13, 0.23, 0.96) !important;
+  }
+
+  :hover {
     border-radius: 4vw;
+    ${HoverWrapper} {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1.1) !important;
+    }
   }
 `;
 export const SectionTitle = styled.h1`
