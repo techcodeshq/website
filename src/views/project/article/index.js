@@ -15,10 +15,12 @@ const Article = ({ data }) => {
               switch (typename) {
                 case 'DatoCmsArticleLink':
                   return (
-                    <Link href={slice.link} target="_blank">
+                    <Link href={slice.link} target="_blank" key={index}>
                       {slice.name}
                     </Link>
                   );
+                default:
+                  return null;
               }
             })}
           </LinkWrapper>
@@ -29,6 +31,8 @@ const Article = ({ data }) => {
               switch (typename) {
                 case 'DatoCmsArticleSubheading':
                   return <SubHeading key={index}>{slice.text}</SubHeading>;
+                default:
+                  return null;
               }
             })}
             <HTMLRenderer html={data.paragraphs} components={{ p: ArticleText }} />
