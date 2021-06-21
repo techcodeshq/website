@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { SmoothScroll } from '@components';
+import { SmoothScroll, Footer } from '@components';
 import { Info, Team } from '@views/about';
 
 const AboutPage = ({ data, location }) => {
@@ -12,6 +12,7 @@ const AboutPage = ({ data, location }) => {
       <SmoothScroll callbacks={location} />
       <Info data={doc.node} images={data} />
       <Team data={doc.node} />
+      <Footer />
     </>
   );
 };
