@@ -12,7 +12,9 @@ const Initiatives = ({ data }) => {
           {data.map((content, index) => (
             <ImageWrapper to={`/${content.slug}`} key={index}>
               <HoverWrapper>
-                <Link to={`/${content.slug}`}>View Event</Link>
+                <Link color="#F3F2F2" to={`/${content.slug}`}>
+                  View Event
+                </Link>
               </HoverWrapper>
               <GatsbyImage image={content.thumbnail.gatsbyImageData} alt={content.thumbnail.alt} />
             </ImageWrapper>
