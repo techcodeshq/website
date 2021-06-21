@@ -53,7 +53,7 @@ export const DescriptionText = styled.p`
 export const RightImage = styled(motion.div)`
   z-index: 2;
   position: absolute;
-  width: 32vw;
+  width: 54vmin;
   right: -4vw;
   bottom: 22vw;
 
