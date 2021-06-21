@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Head, ThemeProvider, SmoothScroll, Nav } from '@components';
+import { Head, ThemeProvider, Nav } from '@components';
 import { GlobalStyle } from '@styles';
 
 const variants = {
@@ -43,7 +43,6 @@ const Layout = ({ children, location }) => {
 
           <ThemeProvider>
             <GlobalStyle />
-            <SmoothScroll callbacks={location} />
             <AnimatePresence exitBeforeEnter>
               <motion.main
                 key={location.pathname}

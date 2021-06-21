@@ -79,7 +79,7 @@ export const StyledText = styled(motion.p)`
   text-indent: 2vw;
   font-size: 1vw;
   align-self: flex-end;
-  margin-top: 8vw;
+  margin-top: 6vw;
 
   ${media.desktop`
     font-size: 1.4vw;
