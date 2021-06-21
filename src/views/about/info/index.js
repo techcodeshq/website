@@ -11,22 +11,42 @@ import {
   DescriptionText,
   DescriptionWrapper,
 } from './style';
-import { Container } from '@styles';
+import { Container, OverflowWrapper } from '@styles';
 
 const Info = ({ data, images }) => {
   return (
     <InfoSection>
       <Container>
         <HeroWrapper>
-          <RightImage>
+          <RightImage
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.8, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
             <GatsbyImage image={images.blast.childImageSharp.gatsbyImageData} alt="Floating toy" />
           </RightImage>
-          <LeftImage>
+          <LeftImage
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 1, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
             <GatsbyImage image={images.boxed.childImageSharp.gatsbyImageData} alt="Floating toy" />
           </LeftImage>
           <Title>
-            <TitleLine>Tech</TitleLine>
-            <TitleLine>Codes</TitleLine>
+            <OverflowWrapper>
+              <TitleLine
+                initial={{ y: '-100%' }}
+                animate={{ y: 0 }}
+                transition={{ delay: 0.6, ease: [0.7, 0, 0.07, 1], duration: 1 }}>
+                Tech
+              </TitleLine>
+            </OverflowWrapper>
+            <OverflowWrapper>
+              <TitleLine
+                initial={{ y: '-100%' }}
+                animate={{ y: 0 }}
+                transition={{ delay: 0.8, ease: [0.7, 0, 0.07, 1], duration: 1 }}>
+                Codes
+              </TitleLine>
+            </OverflowWrapper>
           </Title>
         </HeroWrapper>
         <DescriptionWrapper>

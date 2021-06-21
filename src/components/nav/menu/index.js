@@ -9,6 +9,7 @@ import {
   LinksWrapper,
   BottomLinkWrapper,
   SmallLink,
+  StyledALink,
 } from './style';
 
 const Menu = ({ menuOpen }) => {
@@ -37,11 +38,11 @@ const Menu = ({ menuOpen }) => {
                   initial={{ y: '-100%' }}
                   animate={{
                     y: 0,
-                    transition: { delay: 0.5, ease: [0.7, 0, 0.07, 1], duration: 1 },
+                    transition: { delay: 0.4, ease: [0.7, 0, 0.07, 1], duration: 1 },
                   }}
                   exit={{
                     y: '-100%',
-                    transition: { delay: 0.5, ease: [0.7, 0, 0.07, 1], duration: 1 },
+                    transition: { delay: 0.4, ease: [0.7, 0, 0.07, 1], duration: 1 },
                   }}>
                   <StyledLink to="/about">About.</StyledLink>
                 </motion.div>
@@ -51,11 +52,27 @@ const Menu = ({ menuOpen }) => {
                   initial={{ y: '-100%' }}
                   animate={{
                     y: 0,
-                    transition: { delay: 0.7, ease: [0.7, 0, 0.07, 1], duration: 1 },
+                    transition: { delay: 0.5, ease: [0.7, 0, 0.07, 1], duration: 1 },
                   }}
                   exit={{
                     y: '-100%',
-                    transition: { delay: 0.7, ease: [0.7, 0, 0.07, 1], duration: 1 },
+                    transition: { delay: 0.5, ease: [0.7, 0, 0.07, 1], duration: 1 },
+                  }}>
+                  <StyledALink href="https://bank.hackclub.com/donations/start/techcodes">
+                    Donate.
+                  </StyledALink>
+                </motion.div>
+              </OverflowWrapper>
+              <OverflowWrapper>
+                <motion.div
+                  initial={{ y: '-100%' }}
+                  animate={{
+                    y: 0,
+                    transition: { delay: 0.6, ease: [0.7, 0, 0.07, 1], duration: 1 },
+                  }}
+                  exit={{
+                    y: '-100%',
+                    transition: { delay: 0.6, ease: [0.7, 0, 0.07, 1], duration: 1 },
                   }}>
                   <StyledLink to="/contact">Contact.</StyledLink>
                 </motion.div>
