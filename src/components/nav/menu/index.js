@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Div100vh from 'react-div-100vh';
 import { OverflowWrapper } from '@styles';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -13,6 +13,14 @@ import {
 } from './style';
 
 const Menu = ({ menuOpen }) => {
+  useEffect(() => {
+    if (menuOpen) {
+      window.scroll.stop();
+    } else {
+      window.scroll.start();
+    }
+  }, [menuOpen]);
+
   return (
     <AnimatePresence>
       {menuOpen && (
