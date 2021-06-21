@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { ThemeContext } from '@components';
 import { media } from '@styles';
 
 import Menu from './menu';
+import ImageLogo from '@images/logo.png';
 
+const Logo = styled.img`
+  width: 3vw;
+  margin: 0 2vw;
+`;
 const HeaderWrap = styled.header`
   position: fixed;
   width: 100%;
   z-index: 9998;
 `;
 const NavWrap = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const MenuWrap = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -106,21 +117,26 @@ const Nav = () => {
   return (
     <HeaderWrap data-scroll data-scroll-sticky data-scroll-target="#___container">
       <NavWrap>
-        <ToggleWrapper>
-          <label>
-            <input
-              type="checkbox"
-              onChange={ev => {
-                setColorMode(ev.target.checked ? 'dark' : 'light');
-              }}
-              checked={colorMode === 'dark'}
-            />
-          </label>
-        </ToggleWrapper>
-        <BoxWrapper onClick={toggleMenu}>
-          <StyledHamburger menuOpen={menuOpen} />
-        </BoxWrapper>
-        <Menu menuOpen={menuOpen} />
+        <Link to="/">
+          <Logo src={ImageLogo} alt="TechCodes" />
+        </Link>
+        <MenuWrap>
+          <ToggleWrapper>
+            <label>
+              <input
+                type="checkbox"
+                onChange={ev => {
+                  setColorMode(ev.target.checked ? 'dark' : 'light');
+                }}
+                checked={colorMode === 'dark'}
+              />
+            </label>
+          </ToggleWrapper>
+          <BoxWrapper onClick={toggleMenu}>
+            <StyledHamburger menuOpen={menuOpen} />
+          </BoxWrapper>
+          <Menu menuOpen={menuOpen} />
+        </MenuWrap>
       </NavWrap>
     </HeaderWrap>
   );

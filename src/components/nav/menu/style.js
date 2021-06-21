@@ -38,7 +38,7 @@ export const StyledLink = styled(GatsbyLink)`
   color: var(--text);
   line-height: 100%;
   width: fit-content;
-  ${media.thone`font-size: 8.7vw;`};
+  ${media.thone`font-size: 13vw;`};
 
   :hover {
     color: var(--green);
@@ -47,11 +47,14 @@ export const StyledLink = styled(GatsbyLink)`
 export const BottomLinkWrapper = styled.div`
   margin-top: 2vw;
   margin-left: 0.4vw;
+
+  ${media.tablet`margin-top: 8vw;`};
 `;
 export const SmallLink = styled.a`
   font-size: 1.2vw;
   text-decoration: none;
   color: var(--undertone);
+  ${media.tablet`font-size: 18px;`};
 
   :hover {
     color: var(--green);

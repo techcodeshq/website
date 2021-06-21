@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from 'gatsby';
 
 const LinkWrapperStyle = css`
   padding: 1vh 1.7vw;
-  border-radius: 70px;
+  border-radius: 4vw;
   border: 0.2vw solid var(--text);
   text-decoration: none;
   color: var(--text);

@@ -12,30 +12,52 @@ const scroll = {
   },
 };
 
-const Scroll = callbacks => {
+const Scroll = ({ callbacks, delay = false }) => {
   useEffect(() => {
-    let locomotiveScroll;
+    if (delay) {
+      setTimeout(() => {
+        let locomotiveScroll;
 
-    setTimeout(() => {
+        locomotiveScroll = new LocomotiveScroll({
+          el: document.querySelector(scroll.container),
+          ...scroll.options,
+        });
+        locomotiveScroll.update();
+
+        // Exposing to the global scope for ease of use.
+        window.scroll = locomotiveScroll;
+
+        locomotiveScroll.on('scroll', func => {
+          // Update `data-direction` with scroll direction.
+          document.documentElement.setAttribute('data-direction', func.direction);
+        });
+
+        return () => {
+          if (locomotiveScroll) locomotiveScroll.destroy();
+        };
+      }, 300);
+    } else {
+      let locomotiveScroll;
+
       locomotiveScroll = new LocomotiveScroll({
         el: document.querySelector(scroll.container),
         ...scroll.options,
       });
+      locomotiveScroll.update();
 
       // Exposing to the global scope for ease of use.
       window.scroll = locomotiveScroll;
-      setTimeout(() => locomotiveScroll.update(), 300);
 
       locomotiveScroll.on('scroll', func => {
         // Update `data-direction` with scroll direction.
         document.documentElement.setAttribute('data-direction', func.direction);
       });
-    }, 500);
 
-    return () => {
-      if (locomotiveScroll) locomotiveScroll.destroy();
-    };
-  }, [callbacks]);
+      return () => {
+        if (locomotiveScroll) locomotiveScroll.destroy();
+      };
+    }
+  }, [callbacks, delay]);
 
   return null;
 };
