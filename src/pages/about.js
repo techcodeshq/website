@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { SmoothScroll, Footer } from '@components';
 import { Info, Team } from '@views/about';
@@ -9,7 +10,9 @@ const AboutPage = ({ data, location }) => {
 
   return (
     <>
+      <Helmet title="About" />
       <SmoothScroll callbacks={location} />
+
       <Info data={doc.node} images={data} />
       <Team data={doc.node} />
       <Footer />

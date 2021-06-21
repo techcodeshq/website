@@ -15,13 +15,13 @@ import {
 const Menu = ({ menuOpen }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setTimeout(() => {
-        if (menuOpen) {
-          window.scroll.stop();
-        } else {
+      if (menuOpen) {
+        window.scroll.stop();
+      } else {
+        setTimeout(() => {
           window.scroll.start();
-        }
-      }, 500);
+        }, 1000);
+      }
     }
   }, [menuOpen]);
 
