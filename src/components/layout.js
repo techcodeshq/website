@@ -43,19 +43,19 @@ const Layout = ({ children, location }) => {
 
           <ThemeProvider>
             <GlobalStyle />
-            <AnimatePresence exitBeforeEnter>
-              <motion.main
-                key={location.pathname}
-                variants={variants}
-                initial="initial"
-                animate="enter"
-                exit="exit">
-                <div id="___container">
-                  <Nav />
+            <div id="___container">
+              <Nav />
+              <AnimatePresence exitBeforeEnter>
+                <motion.main
+                  key={location.pathname}
+                  variants={variants}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit">
                   {children}
-                </div>
-              </motion.main>
-            </AnimatePresence>
+                </motion.main>
+              </AnimatePresence>
+            </div>
           </ThemeProvider>
         </>
       )}
