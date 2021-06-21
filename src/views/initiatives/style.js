@@ -24,6 +24,7 @@ export const HoverWrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(20, 20, 20, 0.4);
+  color: #f3f2f2;
   opacity: 0;
   transition: all 0.2s cubic-bezier(0.43, 0.13, 0.23, 0.96) !important;
 

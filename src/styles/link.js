@@ -5,9 +5,9 @@ import { Link as GatsbyLink } from 'gatsby';
 const LinkWrapperStyle = css`
   padding: 1vh 1.7vw;
   border-radius: 4vw;
-  border: 0.2vw solid var(--text);
+  border: 0.2vw solid ${props => (props.color ? props.color : 'var(--text)')};
   text-decoration: none;
-  color: var(--text);
+  color: ${props => (props.color ? props.color : 'var(--text)')};
   font-size: inherit;
   font-weight: inherit;
   user-select: none;
@@ -26,11 +26,11 @@ const NormalLinkWrapper = styled.a`
 `;
 
 const Link = props => {
-  const { href, to, target, children, ...rest } = props;
+  const { href, to, target, color, children, ...rest } = props;
 
   if (to)
     return (
-      <GatsbyLinkWrapper to={to} {...rest}>
+      <GatsbyLinkWrapper to={to} {...rest} color={color}>
         {children}
       </GatsbyLinkWrapper>
     );
@@ -41,7 +41,8 @@ const Link = props => {
         href={href}
         target={target || '_blank'}
         rel={!target ? 'noopener noreferrer' : undefined}
-        {...rest}>
+        {...rest}
+        color={color}>
         {children}
       </NormalLinkWrapper>
     );
