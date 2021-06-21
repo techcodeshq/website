@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { ThemeContext } from '@components';
@@ -108,11 +108,15 @@ const StyledHamburger = styled.div`
   }
 `;
 
-const Nav = () => {
+const Nav = ({ location }) => {
   const { colorMode, setColorMode } = React.useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(menuOpen => !menuOpen);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   return (
     <HeaderWrap data-scroll data-scroll-sticky data-scroll-target="#___container">
@@ -135,7 +139,7 @@ const Nav = () => {
           <BoxWrapper onClick={toggleMenu}>
             <StyledHamburger menuOpen={menuOpen} />
           </BoxWrapper>
-          <Menu menuOpen={menuOpen} />
+          <Menu menuOpen={menuOpen} location={location} />
         </MenuWrap>
       </NavWrap>
     </HeaderWrap>

@@ -1,9 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { SmoothScroll } from '@components';
 import HomeSection from '@views/home';
 
-const HomePage = ({ data }) => {
-  return <HomeSection data={data} />;
+const HomePage = ({ data, location }) => {
+  return (
+    <>
+      <SmoothScroll callbacks={location} />
+
+      <HomeSection data={data} />
+    </>
+  );
 };
 
 export default HomePage;

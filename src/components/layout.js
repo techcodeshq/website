@@ -44,7 +44,7 @@ const Layout = ({ children, location }) => {
           <ThemeProvider>
             <GlobalStyle />
             <div id="___container">
-              <Nav />
+              <Nav location={location} />
               <AnimatePresence exitBeforeEnter>
                 <motion.main
                   key={location.pathname}
