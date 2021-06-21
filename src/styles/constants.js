@@ -19,6 +19,10 @@ export const COLORS = {
     light: '#161616',
     dark: '#E4E4E4',
   },
+  gray: {
+    light: '#969696',
+    dark: '#969696',
+  },
 };
 
 export const COLOR_MODE_KEY = 'color-mode';

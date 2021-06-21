@@ -14,10 +14,14 @@ import {
 
 const Menu = ({ menuOpen }) => {
   useEffect(() => {
-    if (menuOpen) {
-      window.scroll.stop();
-    } else {
-      window.scroll.start();
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        if (menuOpen) {
+          window.scroll.stop();
+        } else {
+          window.scroll.start();
+        }
+      }, 500);
     }
   }, [menuOpen]);
 

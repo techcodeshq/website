@@ -46,7 +46,7 @@ const ColLink = styled.a`
   font-weight: 500;
   font-size: 25px;
   letter-spacing: -1.4px;
-  color: var(--dark-gray);
+  color: var(--gray);
   :hover {
     text-decoration: underline;
   }
@@ -79,13 +79,13 @@ const RowBottom = styled.div`
   ${media.tablet`flex-direction: column;`};
 `;
 const Copy = styled.small`
-  color: var(--dark-gray);
+  color: var(--gray);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -1px;
 `;
 const Credits = styled.p`
-  color: var(--dark-gray);
+  color: var(--gray);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -1px;
