@@ -7,8 +7,8 @@ export const ArticleWrap = styled.article`
 `;
 export const ContentWrap = styled.div`
   display: grid;
-  grid-template-columns: auto 80%;
-  grid-gap: 2vw;
+  grid-template-columns: auto 70%;
+  grid-gap: 4vw;
 
   ${media.thone`
     grid-template-columns: 1fr;
@@ -32,9 +32,16 @@ export const SubHeading = styled(ArticleText)`
   ${media.tablet`font-size: 18px;`};
 `;
 export const LinkWrapper = styled.div`
-  padding-top: 3.6vw;
+  padding-top: 2vw;
   font-size: 1.45vw;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  a {
+    margin-top: 1vw;
+  }
 
   ${media.tablet`
     font-size: 16px;

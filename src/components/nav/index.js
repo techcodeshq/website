@@ -10,6 +10,9 @@ import ImageLogo from '@images/logo.png';
 const Logo = styled.img`
   width: 3vw;
   margin: 0 2.8vw;
+
+  ${media.tablet`width: 8vw;`};
+  ${media.thone`width: 12vw;`};
 `;
 const HeaderWrap = styled.header`
   position: fixed;
