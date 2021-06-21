@@ -1,4 +1,5 @@
 import React from 'react';
+import { HTMLRenderer } from '@components';
 import { motion } from 'framer-motion';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { useWindowSize } from '@hooks';
@@ -13,10 +14,11 @@ import {
   RocketImage,
   StyledText,
   ContentWrapper,
+  DescriptionWrapper,
 } from './style';
 import { Link, OverflowWrapper } from '@styles';
 
-const HomeSection = ({ data }) => {
+const HomeSection = ({ data, doc }) => {
   const { width, height } = useWindowSize();
 
   return (
@@ -48,16 +50,12 @@ const HomeSection = ({ data }) => {
             </TitleLine>
           </OverflowWrapper>
         </SectionTitle>
-        <StyledText
+        <DescriptionWrapper
           initial={{ opacity: 0, y: '-10%' }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, ease: [0.7, 0, 0.07, 1], duration: 1 }}>
-          Although diversity efforts are a large talking point in society today, diversity in STEM
-          continues to decrease. We’re addressing these issues at their roots by bringing together
-          like-minded students across the entire tri-state, especially those marginalized and
-          disadvantaged, through hackathons, competitions, weekly meetings, and other advantageous
-          events designed by our team.
-        </StyledText>
+          <HTMLRenderer html={doc.description} components={{ p: StyledText }} />
+        </DescriptionWrapper>
         <LinksWrapper>
           <motion.div
             initial={{ opacity: 0, y: '-10%' }}

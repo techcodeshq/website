@@ -4,11 +4,14 @@ import { SmoothScroll } from '@components';
 import HomeSection from '@views/home';
 
 const HomePage = ({ data, location }) => {
+  const doc = data.allDatoCmsHome.edges.slice(0, 1).pop();
+  if (!doc) return null;
+
   return (
     <>
       <SmoothScroll callbacks={location} />
 
-      <HomeSection data={data} />
+      <HomeSection data={data} doc={doc.node} />
     </>
   );
 };
@@ -35,6 +38,13 @@ export const query = graphql`
     rocket: file(relativePath: { eq: "props/rocket.png" }) {
       childImageSharp {
         gatsbyImageData
+      }
+    }
+    allDatoCmsHome {
+      edges {
+        node {
+          description
+        }
       }
     }
   }

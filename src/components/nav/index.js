@@ -9,7 +9,7 @@ import ImageLogo from '@images/logo.png';
 
 const Logo = styled.img`
   width: 3vw;
-  margin: 0 2vw;
+  margin: 0 2.8vw;
 `;
 const HeaderWrap = styled.header`
   position: fixed;

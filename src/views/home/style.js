@@ -73,13 +73,20 @@ export const LinksWrapper = styled.div`
     ${media.thone`margin-right: 3vw;`};
   }
 `;
-export const StyledText = styled(motion.p)`
-  color: var(--text);
+export const DescriptionWrapper = styled(motion.div)`
   width: 18vw;
-  text-indent: 2vw;
-  font-size: 1vw;
   align-self: flex-end;
   margin-top: 6vw;
+
+  ${media.thone`
+    width: 70vw;
+    margin-bottom: 6vw;
+  `};
+`;
+export const StyledText = styled(motion.p)`
+  color: var(--text);
+  text-indent: 2vw;
+  font-size: 1vw;
 
   ${media.desktop`
     font-size: 1.4vw;
@@ -89,7 +96,6 @@ export const StyledText = styled(motion.p)`
     text-indent: 8vw;
     font-size: 3vw;
     width: 70vw;
-    margin-bottom: 6vw;
   `};
 `;
 
