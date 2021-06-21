@@ -62,7 +62,7 @@ export const LinksWrapper = styled.div`
   font-weight: 500;
   font-size: 6vw;
   text-transform: uppercase;
-  margin-top: 2vw;
+  margin: 2vw 0 1vw;
 
   ${media.desktop`font-size: 8vw;`};
   ${media.thone`font-size: 7.8vw;`};
@@ -76,7 +76,6 @@ export const LinksWrapper = styled.div`
 export const DescriptionWrapper = styled(motion.div)`
   width: 18vw;
   align-self: flex-end;
-  margin-top: 6vw;
 
   ${media.thone`
     width: 70vw;
@@ -87,6 +86,7 @@ export const StyledText = styled(motion.p)`
   color: var(--text);
   text-indent: 2vw;
   font-size: 1vw;
+  margin: 0;
 
   ${media.desktop`
     font-size: 1.4vw;
@@ -103,9 +103,9 @@ export const StyledText = styled(motion.p)`
 export const FlaskImage = styled(motion.div)`
   position: absolute;
   transform: scaleX(-1) rotate(8deg);
-  width: 25vw;
+  width: 35vmin;
   top: 5%;
-  left: -2%;
+  left: 2%;
 
   ${media.thone`
     width: 30vw;
@@ -114,8 +114,8 @@ export const FlaskImage = styled(motion.div)`
 export const FolderImage = styled(motion.div)`
   position: absolute;
   transform: rotate(-8deg);
-  width: 25vw;
-  top: 35%;
+  width: 35vmin;
+  top: 40%;
   left: 20%;
 
   ${media.desktop`
@@ -130,8 +130,8 @@ export const FolderImage = styled(motion.div)`
 `;
 export const CupImage = styled(motion.div)`
   position: absolute;
-  width: 20vw;
-  top: 35%;
+  width: 30vmin;
+  top: 40%;
   left: 50%;
 
   ${media.desktop`
@@ -147,9 +147,9 @@ export const CupImage = styled(motion.div)`
 export const RocketImage = styled(motion.div)`
   position: absolute;
   transform: rotate(-10deg);
-  width: 22vw;
-  top: 6%;
-  right: 0;
+  width: 35vmin;
+  top: 2%;
+  right: 2%;
 
   ${media.desktop`
     width: 25vw;
