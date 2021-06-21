@@ -1,8 +1,22 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media } from '@styles';
 import { Link as GatsbyLink } from 'gatsby';
 import { motion } from 'framer-motion';
 
+const LinkStyles = css`
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 6vw;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 100%;
+  width: fit-content;
+  ${media.thone`font-size: 13vw;`};
+
+  :hover {
+    color: var(--green);
+  }
+`;
 export const SplitsWrapper = styled.div`
   position: fixed;
   display: flex;
@@ -31,18 +45,10 @@ export const LinksWrapper = styled.div`
   margin: 1vw;
 `;
 export const StyledLink = styled(GatsbyLink)`
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 6vw;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 100%;
-  width: fit-content;
-  ${media.thone`font-size: 13vw;`};
-
-  :hover {
-    color: var(--green);
-  }
+  ${LinkStyles};
+`;
+export const StyledALink = styled.a`
+  ${LinkStyles};
 `;
 export const BottomLinkWrapper = styled.div`
   margin-top: 2vw;
