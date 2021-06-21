@@ -1,7 +1,7 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { Container } from '@styles';
-import { ProjectsWrapper, ListWrapper, ImageWrapper, SectionTitle } from './style';
+import { Container, Link } from '@styles';
+import { ProjectsWrapper, ListWrapper, ImageWrapper, SectionTitle, HoverWrapper } from './style';
 
 const Initiatives = ({ data }) => {
   return (
@@ -10,7 +10,10 @@ const Initiatives = ({ data }) => {
         <SectionTitle>Initiatives</SectionTitle>
         <ListWrapper>
           {data.map((content, index) => (
-            <ImageWrapper to={`/${content.slug}`}>
+            <ImageWrapper to={`/${content.slug}`} key={index}>
+              <HoverWrapper>
+                <Link to={`/${content.slug}`}>View Event</Link>
+              </HoverWrapper>
               <GatsbyImage image={content.thumbnail.gatsbyImageData} alt={content.thumbnail.alt} />
             </ImageWrapper>
           ))}
