@@ -6,7 +6,7 @@ module.exports = {
     description: `Council of Digital Engineers is a student-led nonprofit organization dedicated to fostering computer science education to students of all backgrounds.`,
     siteUrl: `https://techcodes.org`,
     image: '/og.png',
-    twitterUsername: '@kyryloren',
+    twitterUsername: '@bthscode',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
