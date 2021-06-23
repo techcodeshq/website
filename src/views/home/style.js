@@ -5,8 +5,12 @@ import { media, Container } from '@styles';
 export const SectionWrapper = styled.section`
   position: relative;
   width: 100vw;
-  height: ${props => (props.isMobile ? 'inherit' : '100vh')};
+  height: ${props => (props.isMobile ? '100%' : '100vh')};
   overflow-x: hidden;
+
+  img {
+    pointer-events: none;
+  }
 `;
 export const ContentWrapper = styled(Container)`
   display: flex;
@@ -20,6 +24,11 @@ export const ContentWrapper = styled(Container)`
   padding-top: 2vw;
   padding-bottom: 2vw;
   overflow-x: hidden;
+
+  ${media.thone`
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+  `};
 `;
 export const SectionTitle = styled.h1`
   width: 100%;
@@ -79,6 +88,7 @@ export const DescriptionWrapper = styled(motion.div)`
 
   ${media.thone`
     width: 70vw;
+    margin-top: 3vw;
     margin-bottom: 6vw;
   `};
 `;
@@ -94,7 +104,7 @@ export const StyledText = styled(motion.p)`
   `};
   ${media.thone`
     text-indent: 8vw;
-    font-size: 3vw;
+    font-size: 14px;
     width: 70vw;
   `};
 `;
@@ -126,6 +136,11 @@ export const FolderImage = styled(motion.div)`
     top: 25%;
     left: 20%;
     width: 35vw;
+  `};
+  ${media.phone`
+    top: 18vmax;
+    left: 20min;
+    width: 14vmax;
   `};
 `;
 export const CupImage = styled(motion.div)`
