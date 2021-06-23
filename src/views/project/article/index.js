@@ -1,7 +1,14 @@
 import React from 'react';
 import { HTMLRenderer } from '@components';
 import { Container, Link } from '@styles';
-import { ArticleWrap, ContentWrap, ArticleText, SubHeading, LinkWrapper } from './style';
+import {
+  ArticleWrap,
+  ContentWrap,
+  ArticleText,
+  ArticleLink,
+  SubHeading,
+  LinkWrapper,
+} from './style';
 
 const Article = ({ data }) => {
   return (
@@ -35,7 +42,7 @@ const Article = ({ data }) => {
                   return null;
               }
             })}
-            <HTMLRenderer html={data.paragraphs} components={{ p: ArticleText }} />
+            <HTMLRenderer html={data.paragraphs} components={{ p: ArticleText, a: ArticleLink }} />
           </div>
         </ContentWrap>
       </Container>

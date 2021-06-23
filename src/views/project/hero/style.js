@@ -15,11 +15,13 @@ export const SectionTitle = styled.h1`
   margin: 0;
 
   ${media.desktop`font-size: 8.7vw;`}
-  ${media.thone`font-size: 8.7vw;`};
+  ${media.thone`font-size: 10vw;`};
 `;
 export const ArticleDate = styled.p`
   font-size: 1.2vw;
   margin: 0;
+
+  ${media.thone`font-size: 4vw;`};
 `;
 export const ImageWrapper = styled.div`
   width: 100%;

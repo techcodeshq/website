@@ -23,12 +23,20 @@ export const ArticleText = styled.p`
 
   ${media.tablet`font-size: 16px;`};
 `;
+export const ArticleLink = styled.a`
+  color: var(--green);
+  text-decoration: none;
+
+  :hover {
+    color: var(--text);
+  }
+`;
 export const SubHeading = styled(ArticleText)`
   font-weight: 500;
-  text-indent: 8vw;
-  line-height: 130%;
-
+  line-height: 120%;
   font-size: 2.45vw;
+  margin-bottom: 4vw;
+
   ${media.tablet`font-size: 18px;`};
 `;
 export const LinkWrapper = styled.div`
