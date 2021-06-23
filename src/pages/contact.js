@@ -25,7 +25,7 @@ const Title = styled.h1`
   color: var(--text);
   margin: 0;
 
-  ${media.desktop`font-size: 8.7vw;`}
+  ${media.thone`font-size: 8.4vw;`}
 `;
 const LinkWrap = styled.div`
   font-size: 1.8vw;
@@ -36,7 +36,10 @@ const LinkWrap = styled.div`
   margin: 0;
   margin-top: 10vw;
 
-  ${media.desktop`font-size: vw;`}
+  ${media.thone`
+    font-size: 6vw;
+    margin-top: 20vw;
+  `}
 `;
 
 const ContactPage = ({ location }) => {
