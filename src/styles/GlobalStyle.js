@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 80vh;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-variant-ligatures: common-ligatures;

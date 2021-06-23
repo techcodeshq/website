@@ -28,7 +28,7 @@ const Info = ({ data, images }) => {
     <InfoSection>
       <Container>
         <CheckMobileSection>
-          <HeroWrapper>
+          <HeroWrapper isMobile={isMobile}>
             <RightImage
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}

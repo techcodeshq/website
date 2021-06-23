@@ -13,10 +13,11 @@ export const HeroWrapper = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: ${props => (props.isMobile ? 'unset' : '100vh')};
   padding-top: 14vw;
 
   ${media.tablet`padding: 10vw 0;`};
+  ${props => props.isMobile && `height: inherit;`};
 `;
 export const Title = styled.h1`
   font-size: 22vw;
@@ -27,6 +28,7 @@ export const Title = styled.h1`
   color: var(--text);
 
   ${media.tablet`font-size: 28vw;`};
+  ${media.thone`padding-top: 60vw;`};
 `;
 export const TitleLine = styled(motion.span)`
   position: relative;
@@ -57,7 +59,7 @@ export const RightImage = styled(motion.div)`
   right: -4vw;
   bottom: 22vw;
 
-  ${media.thone`
+  ${media.tablet`
     width: 55vw;
     bottom: 60vw;
   `};
@@ -69,7 +71,7 @@ export const LeftImage = styled(motion.div)`
   left: -8vw;
   bottom: 1vw;
 
-  ${media.thone`
+  ${media.tablet`
     left: -4vw;
     width: 55vw;
     bottom: 54vw;
