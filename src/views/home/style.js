@@ -5,7 +5,7 @@ import { media, Container } from '@styles';
 export const SectionWrapper = styled.section`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: ${props => (props.isMobile ? 'inherit' : '100vh')};
   overflow-x: hidden;
 `;
 export const ContentWrapper = styled(Container)`
@@ -65,12 +65,12 @@ export const LinksWrapper = styled.div`
   margin: 2vw 0 1vw;
 
   ${media.desktop`font-size: 8vw;`};
-  ${media.thone`font-size: 7.8vw;`};
+  ${media.thone`font-size: 7.6vw;`};
 
   a:first-child {
     margin-right: 4vw;
     ${media.desktop`margin-right: 1vw;`};
-    ${media.thone`margin-right: 3vw;`};
+    ${media.thone`margin-right: 2vw;`};
   }
 `;
 export const DescriptionWrapper = styled(motion.div)`
