@@ -68,5 +68,4 @@ export const SectionTitle = styled.h1`
   color: var(--text);
 
   ${media.desktop`font-size: 8.7vw;`}
-  ${media.thone`font-size: 8.7vw;`};
 `;
