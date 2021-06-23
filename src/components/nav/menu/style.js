@@ -40,9 +40,9 @@ export const LinksWrapper = styled.div`
   flex-direction: column;
   top: 0;
   z-index: 9998;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  margin: 1vw;
+  padding: 1vw;
 `;
 export const StyledLink = styled(GatsbyLink)`
   ${LinkStyles};
