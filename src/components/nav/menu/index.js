@@ -17,9 +17,11 @@ const Menu = ({ menuOpen }) => {
     if (typeof window !== 'undefined') {
       if (menuOpen) {
         window.scroll.stop();
+        document.body.style.overflow = 'hidden';
       } else {
         setTimeout(() => {
           window.scroll.start();
+          document.body.style.overflow = 'unset';
         }, 1000);
       }
     }
