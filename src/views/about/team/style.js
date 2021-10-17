@@ -28,7 +28,7 @@ export const NamePerson = styled.p`
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
-  color: var(--green);
+  color: var(--yellow);
 
   ${media.tablet`font-size: 9vw;`};
 `;

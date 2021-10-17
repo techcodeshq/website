@@ -21,18 +21,22 @@ export const ContentWrapper = styled(Container)`
   min-height: 100%;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 2vw;
+  padding-top: 5vw;
   padding-bottom: 2vw;
   overflow-x: hidden;
 
   ${media.thone`
     padding-top: 6vw;
     padding-bottom: 6vw;
+    
   `};
 `;
 export const SectionTitle = styled.h1`
   width: 100%;
-  text-align: center;
+  display: flex;
+  jutify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 0 10vw;
   flex-grow: 1;
   padding-top: 0.05px;
@@ -108,14 +112,49 @@ export const StyledText = styled(motion.p)`
     width: 70vw;
   `};
 `;
+export const JoinButton = styled.button`
+  background: linear-gradient(90deg, #c766ff 0%, #ff8b66 100%);
+  border-radius: 41px;
+  width: 28.472vw;
+  height: 3.75vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+export const JoinButtonText = styled.p`
+  color: var(--background);
+  font-size: 1.25vw;
+  font-weight: 500;
+`;
+export const SmolJoinButton = styled.button`
+  background: var(--background);
+  border-radius: 41px;
+  width: 11.806vw;
+  height: 2.778vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+export const SmolJoinButtonText = styled.button`
+  color: var(--text);
+  font-size: 1.111vw;
+  font-weight: 500;
+`;
+export const AboutWrapper = styled.div`
+  width: 100%;
+  height: 50vw;
+`;
+export const AboutStripes = styled.div``;
 
 // Images
 export const FlaskImage = styled(motion.div)`
   position: absolute;
-  transform: scaleX(-1) rotate(8deg);
+  transform: scaleX(-1) rotate(8deg) !important;
   width: 35vmin;
   top: 5%;
-  left: 2%;
+  left: -5%;
 
   ${media.thone`
     width: 30vw;
@@ -125,7 +164,7 @@ export const FolderImage = styled(motion.div)`
   position: absolute;
   transform: rotate(-8deg);
   width: 35vmin;
-  top: 40%;
+  top: 50%;
   left: 20%;
 
   ${media.desktop`
@@ -146,8 +185,8 @@ export const FolderImage = styled(motion.div)`
 export const CupImage = styled(motion.div)`
   position: absolute;
   width: 30vmin;
-  top: 40%;
-  left: 50%;
+  top: 50%;
+  left: 70%;
 
   ${media.desktop`
     top: 10%;
@@ -163,8 +202,8 @@ export const RocketImage = styled(motion.div)`
   position: absolute;
   transform: rotate(-10deg);
   width: 35vmin;
-  top: 2%;
-  right: 2%;
+  top: 9%;
+  right: -5%;
 
   ${media.desktop`
     width: 25vw;

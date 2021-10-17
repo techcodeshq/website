@@ -16,6 +16,10 @@ import {
   StyledText,
   ContentWrapper,
   DescriptionWrapper,
+  JoinButton,
+  JoinButtonText,
+  SmolJoinButton,
+  SmolJoinButtonText,
 } from './style';
 import { Link, OverflowWrapper } from '@styles';
 import { isMobile } from 'react-device-detect';
@@ -60,13 +64,19 @@ const HomeSection = ({ data, doc }) => {
                 how to code.
               </TitleLine>
             </OverflowWrapper>
+            <JoinButton>
+              <JoinButtonText>Join us for another year</JoinButtonText>
+              <SmolJoinButton>
+                <SmolJoinButtonText>Sign up now</SmolJoinButtonText>
+              </SmolJoinButton>
+            </JoinButton>
           </SectionTitle>
-          <DescriptionWrapper
+          {/* <DescriptionWrapper
             initial={{ opacity: 0, y: '-10%' }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, ease: [0.7, 0, 0.07, 1], duration: 1 }}>
             <HTMLRenderer html={doc.description} components={{ p: StyledText }} />
-          </DescriptionWrapper>
+          </DescriptionWrapper> 
           <LinksWrapper>
             <motion.div
               initial={{ opacity: 0, y: '-10%' }}
@@ -80,39 +90,53 @@ const HomeSection = ({ data, doc }) => {
               transition={{ delay: 0.6, ease: [0.7, 0, 0.07, 1], duration: 1 }}>
               <Link to="/initiatives">Initiatives</Link>
             </motion.div>
-          </LinksWrapper>
+          </LinksWrapper>*/}
         </ContentWrapper>
-        {(width <= 1000 && width > 850 && height < 1040) ||
+        {
+          /* {(width <= 1000 && width > 850 && height < 1040) ||
         (width <= 850 && width > 675 && height < 825) ||
         (width <= 675 && width > 550 && height < 970) ||
-        (width <= 550 && height < 550) ? null : (
-          <>
-            <FlaskImage
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
-              <GatsbyImage image={data.potion.childImageSharp.gatsbyImageData} alt="Floating toy" />
-            </FlaskImage>
-            <FolderImage
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1.1, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
-              <GatsbyImage image={data.folder.childImageSharp.gatsbyImageData} alt="Floating toy" />
-            </FolderImage>
-            <CupImage
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1.2, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
-              <GatsbyImage image={data.bucket.childImageSharp.gatsbyImageData} alt="Floating toy" />
-            </CupImage>
-            <RocketImage
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1.3, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
-              <GatsbyImage image={data.rocket.childImageSharp.gatsbyImageData} alt="Floating toy" />
-            </RocketImage>
-          </>
-        )}
+        (width <= 550 && height < 550)*/ false ? null : (
+            <>
+              <FlaskImage
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
+                <GatsbyImage
+                  image={data.potion.childImageSharp.gatsbyImageData}
+                  alt="Floating toy"
+                />
+              </FlaskImage>
+              <FolderImage
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1.1, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
+                <GatsbyImage
+                  image={data.folder.childImageSharp.gatsbyImageData}
+                  alt="Floating toy"
+                />
+              </FolderImage>
+              <CupImage
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1.2, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
+                <GatsbyImage
+                  image={data.bucket.childImageSharp.gatsbyImageData}
+                  alt="Floating toy"
+                />
+              </CupImage>
+              <RocketImage
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1.3, ease: [0.7, 0, 0.07, 1], duration: 0.8 }}>
+                <GatsbyImage
+                  image={data.rocket.childImageSharp.gatsbyImageData}
+                  alt="Floating toy"
+                />
+              </RocketImage>
+            </>
+          )
+        }
       </SectionWrapper>
     </CheckMobileSection>
   );
