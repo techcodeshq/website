@@ -24,7 +24,7 @@ export const ArticleText = styled.p`
   ${media.tablet`font-size: 16px;`};
 `;
 export const ArticleLink = styled.a`
-  color: var(--green);
+  color: var(--yellow);
   text-decoration: none;
 
   :hover {

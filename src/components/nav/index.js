@@ -5,14 +5,18 @@ import { ThemeContext } from '@components';
 import { media } from '@styles';
 
 import Menu from './menu';
-import ImageLogo from '@images/logo.png';
+import ImageLogo from '@images/logo.svg';
 
 const Logo = styled.img`
-  width: 3vw;
+  width: 10vw;
   margin: 0 2.8vw;
 
-  ${media.tablet`width: 8vw;`};
-  ${media.thone`width: 12vw;`};
+  ${media.tablet`width: 12vw;`};
+  ${media.thone`width: 16vw;`};
+`;
+const LogoWrap = styled(Link)`
+  margin-left: auto;
+  margin-right: auto;
 `;
 const HeaderWrap = styled.header`
   position: fixed;
@@ -56,7 +60,7 @@ const BoxWrapper = styled.div`
   cursor: pointer;
 
   ${media.tablet`
-    padding: 8vw 4vw;
+    padding: 25px;
     margin-left: 2vw;
   `};
 `;
@@ -73,7 +77,7 @@ const StyledHamburger = styled.div`
   transition-timing-function: cubic-bezier(
     ${props => (props.menuOpen ? `0.215, 0.61, 0.355, 1` : `0.55, 0.055, 0.675, 0.19`)}
   );
-  ${media.tablet`width: 12vw;`};
+  ${media.tablet`width: 4vw;`};
   &:before,
   &:after {
     content: '';
@@ -87,12 +91,12 @@ const StyledHamburger = styled.div`
     transition-timing-function: ease;
     transition-duration: 0.15s;
     transition-property: transform;
-    ${media.tablet`width: 12vw;`};
+    ${media.tablet`width: 1vw;`};
   }
   &:before {
     width: 100%;
     top: ${props => (props.menuOpen ? `0` : `-0.4vw`)};
-    ${media.tablet`top: ${props => (props.menuOpen ? `0` : `-1.8vw`)};`};
+    ${media.tablet`top: ${props => (props.menuOpen ? `0` : `-0.8vw`)};`};
     opacity: ${props => (props.menuOpen ? 0 : 1)};
     transition: ${props =>
       props.menuOpen
@@ -102,7 +106,7 @@ const StyledHamburger = styled.div`
   &:after {
     width: 100%;
     bottom: ${props => (props.menuOpen ? `0` : `-0.4vw`)};
-    ${media.tablet`bottom: ${props => (props.menuOpen ? `0` : `-1.8vw`)};`};
+    ${media.tablet`bottom: ${props => (props.menuOpen ? `0` : `-0.8vw`)};`};
     transform: rotate(${props => (props.menuOpen ? `-90deg` : `0`)});
     transition: ${props =>
       props.menuOpen
@@ -124,11 +128,11 @@ const Nav = ({ location }) => {
   return (
     <HeaderWrap data-scroll data-scroll-sticky data-scroll-target="#___container">
       <NavWrap>
-        <Link to="/">
+        <LogoWrap to="/">
           <Logo src={ImageLogo} alt="TechCodes" />
-        </Link>
+        </LogoWrap>
         <MenuWrap>
-          <ToggleWrapper>
+          {/* <ToggleWrapper>
             <label>
               <input
                 type="checkbox"
@@ -138,7 +142,7 @@ const Nav = ({ location }) => {
                 checked={colorMode === 'dark'}
               />
             </label>
-          </ToggleWrapper>
+          </ToggleWrapper> */}
           <BoxWrapper onClick={toggleMenu}>
             <StyledHamburger menuOpen={menuOpen} />
           </BoxWrapper>

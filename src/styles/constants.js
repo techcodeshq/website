@@ -1,23 +1,23 @@
 export const COLORS = {
   text: {
-    light: '#161616',
-    dark: '#F3F2F2',
+    light: '#F6F6F6',
+    dark: '#F6F6F6',
   },
   background: {
-    light: '#F8F8F8',
-    dark: '#141414',
+    light: '#1D166F',
+    dark: '#1D166F',
   },
   accent: {
     light: '#E7E7E7',
-    dark: '#090909',
+    dark: '#E7E7E7',
   },
-  green: {
-    light: '#4CC849',
-    dark: '#57DF55',
+  yellow: {
+    light: '#FFCC66',
+    dark: '#FFCC66',
   },
   undertone: {
     light: '#161616',
-    dark: '#E4E4E4',
+    dark: '#161616',
   },
   gray: {
     light: '#969696',

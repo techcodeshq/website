@@ -13,8 +13,8 @@ const LinkWrapperStyle = css`
   user-select: none;
 
   :hover {
-    color: var(--green);
-    border-color: var(--green);
+    color: var(--yellow);
+    border-color: var(--yellow);
   }
 `;
 

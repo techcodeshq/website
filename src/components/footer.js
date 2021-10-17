@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, media } from '@styles';
 import { FormattedIcon } from '@components/icons';
-import CODELogo from '@images/logo.png';
+import CODELogo from '@images/logo.svg';
 
 const FooterSection = styled.footer`
   padding: 6.25rem 0;
@@ -91,7 +91,7 @@ const Credits = styled.p`
   letter-spacing: -1px;
 `;
 const Logo = styled.img`
-  width: 6rem;
+  width: 10rem;
 `;
 
 const Footer = () => {
@@ -102,6 +102,7 @@ const Footer = () => {
     <FooterSection>
       <Container>
         <Row>
+          <Logo src={CODELogo} alt="Council of Digital Engineers" />
           <RowInRow>
             <Col>
               <ColTitle>Contact us</ColTitle>
@@ -139,7 +140,6 @@ const Footer = () => {
               </Socials>
             </Col>
           </RowInRow>
-          <Logo src={CODELogo} alt="Council of Digital Engineers" />
         </Row>
         <RowBottom>
           <a href="/press-release.pdf">Download latest press release</a>

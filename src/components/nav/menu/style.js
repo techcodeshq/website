@@ -14,7 +14,7 @@ const LinkStyles = css`
   ${media.thone`font-size: 13vw;`};
 
   :hover {
-    color: var(--green);
+    color: var(--yellow);
   }
 `;
 export const SplitsWrapper = styled.div`
@@ -26,7 +26,7 @@ export const SplitsWrapper = styled.div`
 `;
 export const HalfSplit = styled(motion.div)`
   position: fixed;
-  background-color: var(--accent);
+  background-color: var(--background);
   width: 50%;
   height: 0;
 
@@ -63,6 +63,6 @@ export const SmallLink = styled.a`
   ${media.tablet`font-size: 18px;`};
 
   :hover {
-    color: var(--green);
+    color: var(--yellow);
   }
 `;
