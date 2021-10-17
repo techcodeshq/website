@@ -59,7 +59,7 @@ export const BottomLinkWrapper = styled.div`
 export const SmallLink = styled.a`
   font-size: 1.2vw;
   text-decoration: none;
-  color: var(--undertone);
+  color: var(--text);
   ${media.tablet`font-size: 18px;`};
 
   :hover {
