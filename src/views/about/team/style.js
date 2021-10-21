@@ -32,6 +32,7 @@ export const NamePerson = styled.p`
 
   ${media.tablet`font-size: 9vw;`};
 `;
+
 export const NormalText = styled.p`
   font-size: 1.8vw;
   line-height: 120%;
