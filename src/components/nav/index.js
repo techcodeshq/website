@@ -111,7 +111,7 @@ const StyledHamburger = styled.div`
   }
 `;
 
-const Nav = ({ location }) => {
+const Nav = ({ location, pr }) => {
   const { colorMode, setColorMode } = React.useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -142,7 +142,7 @@ const Nav = ({ location }) => {
           <BoxWrapper onClick={toggleMenu}>
             <StyledHamburger menuOpen={menuOpen} />
           </BoxWrapper>
-          <Menu menuOpen={menuOpen} location={location} />
+          <Menu menuOpen={menuOpen} location={location} pr={pr} />
         </MenuWrap>
       </NavWrap>
     </HeaderWrap>

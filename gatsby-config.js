@@ -2,8 +2,8 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Council of Digital Engineers`,
-    description: `Council of Digital Engineers is a student-led nonprofit organization dedicated to fostering computer science education to students of all backgrounds.`,
+    title: `TechCodes`,
+    description: `TechCodes is a student-led nonprofit organization dedicated to fostering computer science education to students of all backgrounds.`,
     siteUrl: `https://techcodes.org`,
     image: '/og.png',
     twitterUsername: '@bthscode',

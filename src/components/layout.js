@@ -35,30 +35,43 @@ const Layout = ({ children, location }) => {
               description
             }
           }
+          allDatoCmsAbout {
+            edges {
+              node {
+                pressRelease {
+                  url
+                }
+              }
+            }
+          }
         }
       `}
-      render={site => (
-        <>
-          <Head metadata={site.site.siteMetadata} />
+      render={site => {
+        const doc = site.allDatoCmsAbout.edges.slice(0, 1).pop();
 
-          <ThemeProvider>
-            <GlobalStyle />
-            <div id="___container">
-              <Nav location={location} />
-              <AnimatePresence exitBeforeEnter>
-                <motion.main
-                  key={location.pathname}
-                  variants={variants}
-                  initial="initial"
-                  animate="enter"
-                  exit="exit">
-                  {children}
-                </motion.main>
-              </AnimatePresence>
-            </div>
-          </ThemeProvider>
-        </>
-      )}
+        return (
+          <>
+            <Head metadata={site.site.siteMetadata} />
+
+            <ThemeProvider>
+              <GlobalStyle />
+              <div id="___container">
+                <Nav location={location} pr={doc.node.pressRelease.url} />
+                <AnimatePresence exitBeforeEnter>
+                  <motion.main
+                    key={location.pathname}
+                    variants={variants}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit">
+                    {children}
+                  </motion.main>
+                </AnimatePresence>
+              </div>
+            </ThemeProvider>
+          </>
+        );
+      }}
     />
   );
 };

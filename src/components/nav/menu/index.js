@@ -12,7 +12,7 @@ import {
   StyledALink,
 } from './style';
 
-const Menu = ({ menuOpen }) => {
+const Menu = ({ menuOpen, pr }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       if (menuOpen) {
@@ -103,7 +103,9 @@ const Menu = ({ menuOpen }) => {
                       y: '-100%',
                       transition: { delay: 0.7, ease: [0.7, 0, 0.07, 1], duration: 1 },
                     }}>
-                    <SmallLink href="/press-release.pdf">Latest press release</SmallLink>
+                    <SmallLink href={pr} target="_blank" rel="noopener noreferrer">
+                      Latest press release
+                    </SmallLink>
                   </motion.div>
                 </OverflowWrapper>
               </BottomLinkWrapper>

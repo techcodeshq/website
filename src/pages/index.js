@@ -22,7 +22,7 @@ export const query = graphql`
   {
     potion: file(relativePath: { eq: "props/potion.png" }) {
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData 
       }
     }
     folder: file(relativePath: { eq: "props/folder.png" }) {
