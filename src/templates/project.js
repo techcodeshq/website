@@ -8,7 +8,11 @@ const Project = ({ pageContext, location }) => {
 
   return (
     <>
-      <Helmet title={project.seo.title} />
+      <Helmet title={project.seo.title}>
+        <meta name="description" content={project.seo.description} />
+        <meta property="og:description" content={project.seo.description} />
+        <meta name="twitter:description" content={project.seo.description} />
+      </Helmet>
       <SmoothScroll callbacks={location} />
 
       <Hero data={project} />

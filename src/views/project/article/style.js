@@ -21,7 +21,8 @@ export const ArticleText = styled.p`
   margin-bottom: 0;
   color: var(--text);
 
-  ${media.tablet`font-size: 16px;`};
+  ${media.tablet`font-size: 18px;`};
+  ${media.phone`font-size: 16px;`};
 `;
 export const ArticleLink = styled.a`
   color: var(--green);
@@ -37,7 +38,8 @@ export const SubHeading = styled(ArticleText)`
   font-size: 2.45vw;
   margin-bottom: 4vw;
 
-  ${media.tablet`font-size: 18px;`};
+  ${media.tablet`font-size: 24px;`};
+  ${media.tablet`font-size: 22px;`};
 `;
 export const LinkWrapper = styled.div`
   padding-top: 2vw;
@@ -55,4 +57,29 @@ export const LinkWrapper = styled.div`
     font-size: 16px;
     margin-top: 5vw;
   `};
+`;
+export const ImageWrapper = styled.div`
+  width: 100%;
+  margin-top: 4vw;
+  ${media.tablet`margin-top: 20px;`};
+
+  img {
+    border-radius: 4vw;
+  }
+`;
+export const SplitWrapper = styled(ImageWrapper)`
+  display: grid;
+  grid-gap: 4vw;
+  grid-template-columns: ${props => (props.uneven ? `2fr 1fr` : `auto auto`)};
+
+  ${media.tablet`
+    grid-template-columns: 1fr;
+    grid-template-rows: ${props => (props.split ? `1fr 1fr` : `1fr`)};
+    grid-gap: 20px;
+  `};
+`;
+export const ImagesWrap = styled.div`
+  margin-top: 6vw;
+
+  ${media.tablet`margin-top: 60px;`};
 `;

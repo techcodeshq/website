@@ -10,6 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
           slug
           seo {
             title
+            description
           }
           thumbnail {
             gatsbyImageData(layout: FULL_WIDTH)
@@ -26,6 +27,27 @@ exports.createPages = async ({ graphql, actions }) => {
             ... on DatoCmsArticleSubheading {
               __typename
               text
+            }
+          }
+          images {
+            ... on DatoCmsFullImage {
+              __typename
+              image {
+                gatsbyImageData(layout: FULL_WIDTH)
+                alt
+              }
+            }
+            ... on DatoCmsSplitImage {
+              __typename
+              unevenSplit
+              leftImage {
+                gatsbyImageData(layout: FULL_WIDTH)
+                alt
+              }
+              rightImage {
+                gatsbyImageData(layout: FULL_WIDTH)
+                alt
+              }
             }
           }
           paragraphs

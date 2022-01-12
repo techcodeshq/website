@@ -4,11 +4,9 @@ import { Container } from '@styles';
 import { HeroSection, SectionTitle, ArticleDate, ImageWrapper } from './style';
 
 const Hero = ({ data }) => {
-  const parsedDate = new Date(data.date).toLocaleString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  console.log(data.date);
+  const normalDate = new Date(data.date);
+  const parsedDate = new Date(normalDate.getTime() + Math.abs(normalDate.getTimezoneOffset()*60000)).toDateString();
 
   return (
     <HeroSection>
