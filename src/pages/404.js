@@ -65,7 +65,6 @@ const NotFoundPage = ({ location }) => {
           </ContentWrapper>
         </Container>
       </SectionWrapper>
-      <Footer />
     </>
   );
 };

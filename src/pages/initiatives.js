@@ -13,7 +13,6 @@ const InitiativesPage = ({ data, location }) => {
       <SmoothScroll callbacks={location} />
 
       <Initiatives data={doc} />
-      <Footer />
     </>
   );
 };

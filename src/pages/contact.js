@@ -59,8 +59,6 @@ const ContactPage = ({ location }) => {
           </Container>
         </ContentWrapper>
       </SectionWrapper>
-
-      <Footer />
     </>
   );
 };

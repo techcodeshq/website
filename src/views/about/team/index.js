@@ -10,7 +10,10 @@ import {
   NormalText,
   TextWrap,
   Position,
+  SponsorText,
+  SponsorWrapper,
 } from './style';
+import SponsorsImage from '@images/sponsors.png';
 
 const Team = ({ data }) => {
   return (
@@ -31,6 +34,10 @@ const Team = ({ data }) => {
           </Container>
         </TeamMember>
       ))}
+      <SponsorWrapper>
+        <SponsorText>We work with some pretty unique people</SponsorText>
+        <img src={SponsorsImage} alt="Our beloved sponsors." />
+      </SponsorWrapper>
     </>
   );
 };

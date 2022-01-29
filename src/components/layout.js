@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Head, ThemeProvider, Nav } from '@components';
+import { Head, ThemeProvider, Nav, Footer } from '@components';
 import { GlobalStyle } from '@styles';
 
 const variants = {
@@ -48,6 +48,7 @@ const Layout = ({ children, location }) => {
       `}
       render={site => {
         const doc = site.allDatoCmsAbout.edges.slice(0, 1).pop();
+        console.log(location);
 
         return (
           <>
@@ -65,6 +66,7 @@ const Layout = ({ children, location }) => {
                     animate="enter"
                     exit="exit">
                     {children}
+                    {location.pathname !== '/' && <Footer pr={doc.node.pressRelease.url} />}
                   </motion.main>
                 </AnimatePresence>
               </div>

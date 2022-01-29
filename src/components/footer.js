@@ -94,7 +94,7 @@ const Logo = styled.img`
   width: 6rem;
 `;
 
-const Footer = () => {
+const Footer = ({ pr }) => {
   const date = new Date();
   const currentYear = date.getFullYear();
 
@@ -115,7 +115,7 @@ const Footer = () => {
             <Col>
               <ColTitle>Socials</ColTitle>
               <Socials>
-                <a href="https://instagram.com/bthscode" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/techcodeshq" target="_blank" rel="noopener noreferrer">
                   <FormattedIcon name="instagram" />
                 </a>
                 <a
@@ -142,10 +142,10 @@ const Footer = () => {
           <Logo src={CODELogo} alt="Council of Digital Engineers" />
         </Row>
         <RowBottom>
-          <a href="/press-release.pdf">Download latest press release</a>
-          <Copy>
-            &copy; {currentYear} Council of Digital Engineers. 501(c)(3) nonprofit (EIN: 81-2908499)
-          </Copy>
+          <a href={pr} target="_blank" rel="noopener noreferrer">
+            Download latest press release
+          </a>
+          <Copy>&copy; {currentYear} TechCodes. 501(c)(3) nonprofit (EIN: 81-2908499)</Copy>
           <Credits>
             Made by{' '}
             <a href="https://kyryloorlov.com" target="_blank" rel="noopener noreferrer">

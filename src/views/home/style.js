@@ -54,7 +54,7 @@ export const SectionTitle = styled.h1`
   `}
   ${media.thone`
     font-size: 8.7vw;
-    margin-bottom: 0;
+    margin-bottom: 4vh;
   `};
 `;
 export const TitleLine = styled(motion.span)`
@@ -147,7 +147,7 @@ export const CupImage = styled(motion.div)`
   position: absolute;
   width: 30vmin;
   top: 40%;
-  left: 50%;
+  left: 60%;
 
   ${media.desktop`
     top: 10%;

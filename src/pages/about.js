@@ -15,7 +15,6 @@ const AboutPage = ({ data, location }) => {
 
       <Info data={doc.node} images={data} />
       <Team data={doc.node} />
-      <Footer />
     </>
   );
 };

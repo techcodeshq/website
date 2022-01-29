@@ -47,3 +47,27 @@ export const Position = styled.p`
 
   ${media.tablet`font-size: 16px;`};
 `;
+
+// Sponsors
+export const SponsorText = styled.p`
+  font-size: 6vw;
+  line-height: 110%;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text);
+  max-width: 70vw;
+
+  ${media.tablet`font-size: 9vw;`};
+`;
+export const SponsorWrapper = styled.div`
+  padding: 10vw 5vw 2vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+    padding-top: 5vw;
+  }
+`;

@@ -13,9 +13,9 @@ import {
   FolderImage,
   CupImage,
   RocketImage,
-  StyledText,
+  // StyledText,
   ContentWrapper,
-  DescriptionWrapper,
+  // DescriptionWrapper,
 } from './style';
 import { Link, OverflowWrapper } from '@styles';
 import { isMobile } from 'react-device-detect';
@@ -61,12 +61,12 @@ const HomeSection = ({ data, doc }) => {
               </TitleLine>
             </OverflowWrapper>
           </SectionTitle>
-          <DescriptionWrapper
+          {/* <DescriptionWrapper
             initial={{ opacity: 0, y: '-10%' }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, ease: [0.7, 0, 0.07, 1], duration: 1 }}>
             <HTMLRenderer html={doc.description} components={{ p: StyledText }} />
-          </DescriptionWrapper>
+          </DescriptionWrapper> */}
           <LinksWrapper>
             <motion.div
               initial={{ opacity: 0, y: '-10%' }}
