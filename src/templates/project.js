@@ -17,7 +17,6 @@ const Project = ({ pageContext, location }) => {
 
       <Hero data={project} />
       <Article data={project} />
-      <Footer />
     </>
   );
 };
